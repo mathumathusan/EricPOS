@@ -2,11 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\District;
-use App\Models\LocalAuthority;
-use App\Models\Province;
-use App\Models\Survey;
-use App\Models\SurveyResponse;
+
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
