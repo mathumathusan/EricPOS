@@ -17296,7 +17296,7 @@ namespace Barryvdh\Debugbar\Facades {
          * Returns a JavascriptRenderer for this instance
          *
          * @param string $baseUrl
-         * @param string $basePathng
+         * @param string $basePath
          * @return \Barryvdh\Debugbar\JavascriptRenderer 
          * @static 
          */        public static function getJavascriptRenderer($baseUrl = null, $basePath = null)

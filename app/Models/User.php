@@ -42,4 +42,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getImageAttribute()
+    {
+        if ($this->name) {
+            return 'https://ui-avatars.com/api/?name='.$this->name.'&color=001c38&background=ddf0ff&bold=true';
+        }
+        return asset('assets/admin/images/faces/9.jpg');
+    }
+
+    public function getRoleNameAttribute()
+    {
+        if ($this->roles->count() > 0) {
+            return $this->roles->first()->name;
+        }
+        return 'Customer';
+    }
+
 }
