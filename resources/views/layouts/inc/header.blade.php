@@ -9,13 +9,13 @@
             <!-- Start::header-element -->
             <div class="header-element">
                 <div class="horizontal-logo">
-                    <a href="index.html" class="header-logo">
-                        <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
-                        <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
-                        <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
-                        <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
-                        <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
-                        <img src="../assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+                    <a href="{{ route('dashboard') }}" class="header-logo">
+                        <img src="{{ asset('assets/images/lonceybiz/loncey_semi.png') }}" alt="logo" class="desktop-logo">
+                        <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-logo">
+                        <img src="{{ asset('assets/images/lonceybiz/loncey_semi.png') }}" alt="logo" class="desktop-dark">
+                        <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-dark">
+                        <img src="{{ asset('assets/images/lonceybiz/loncey-logo.png') }}" alt="logo" class="desktop-white">
+                        <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-white">
                     </a>
                 </div>
             </div>
@@ -544,12 +544,12 @@
                 </a>
                 <!-- End::header-link|dropdown-toggle -->
                 <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end" aria-labelledby="mainHeaderProfile">
-                    {{-- <li><a class="dropdown-item d-flex" href="profile.html"><i class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
-                    <li><a class="dropdown-item d-flex" href="mail.html"><i class="ti ti-inbox fs-18 me-2 op-7"></i>Inbox <span class="badge bg-success-transparent ms-auto">25</span></a></li>
-                    <li><a class="dropdown-item d-flex border-block-end" href="to-do-list.html"><i class="ti ti-clipboard-check fs-18 me-2 op-7"></i>Task Manager</a></li>
-                    <li><a class="dropdown-item d-flex" href="mail-settings.html"><i class="ti ti-adjustments-horizontal fs-18 me-2 op-7"></i>Settings</a></li>
-                    <li><a class="dropdown-item d-flex border-block-end" href="javascript:void(0);"><i class="ti ti-wallet fs-18 me-2 op-7"></i>Bal: $7,12,950</a></li>
-                    <li><a class="dropdown-item d-flex" href="chat.html"><i class="ti ti-headset fs-18 me-2 op-7"></i>Support</a></li> --}}
+                    <li><a class="dropdown-item d-flex" href="#"><i class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
+                    {{-- <li><a class="dropdown-item d-flex" href="mail.html"><i class="ti ti-inbox fs-18 me-2 op-7"></i>Inbox <span class="badge bg-success-transparent ms-auto">25</span></a></li> --}}
+                    {{-- <li><a class="dropdown-item d-flex border-block-end" href="to-do-list.html"><i class="ti ti-clipboard-check fs-18 me-2 op-7"></i>Task Manager</a></li> --}}
+                    {{-- <li><a class="dropdown-item d-flex" href="mail-settings.html"><i class="ti ti-adjustments-horizontal fs-18 me-2 op-7"></i>Settings</a></li> --}}
+                    {{-- <li><a class="dropdown-item d-flex border-block-end" href="javascript:void(0);"><i class="ti ti-wallet fs-18 me-2 op-7"></i>Bal: $7,12,950</a></li> --}}
+                    <li><a class="dropdown-item d-flex" href="https://www.lonceytech.com/contact-us" target="_blank"><i class="ti ti-headset fs-18 me-2 op-7"></i>Support</a></li>
                     <li>
                         <a class="dropdown-item d-flex" href="#"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -564,6 +564,7 @@
             </div>
             <!-- End::header-element -->
 
+            @if (false)
             <!-- Start::header-element -->
             <div class="header-element">
                 <!-- Start::header-link|switcher-icon -->
@@ -573,6 +574,8 @@
                 <!-- End::header-link|switcher-icon -->
             </div>
             <!-- End::header-element -->
+
+            @endif
 
         </div>
         <!-- End::header-content-right -->

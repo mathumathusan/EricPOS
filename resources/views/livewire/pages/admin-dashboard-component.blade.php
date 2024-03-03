@@ -1,4 +1,6 @@
 <main>
+@if (false)
+
 
                 <!-- Start::row-1 -->
                 <div class="row">
@@ -544,7 +546,6 @@
                                             <tr>
                                                 <th scope="col">S.No</th>
                                                 <th scope="col">Invoice ID</th>
-                                                <th scope="col">Client</th>
                                                 <th scope="col">Due Date</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Amount</th>
@@ -552,22 +553,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @for ($i = 0; $i < 3; $i++)
+
+
                                             <tr>
                                                 <td>1</td>
                                                 <td>#INV111611</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/1.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Rena Mark</span>
-                                                            <span class="text-muted fs-12">renamark123@demo</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
                                                 <td>
                                                     14-05-2023
                                                 </td>
@@ -584,166 +575,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>#INV111611</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/4.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Xong Yun</span>
-                                                            <span class="text-muted fs-12">xongyun2134@gmail.com</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    14-05-2023
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-warning">Pending</span>
-                                                </td>
-                                                <td>
-                                                    $8,243
-                                                </td>
-                                                <td>
-                                                    <div class="btn-list">
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-icon btn-info-light"><i class="ri-pencil-line"></i></a>
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light"><i class="ri-delete-bin-line"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>#INV147852</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/6.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Kane William</span>
-                                                            <span class="text-muted fs-12">william154@demo</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    16-05-2023
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-primary">Overdue</span>
-                                                </td>
-                                                <td>
-                                                    $5,234
-                                                </td>
-                                                <td>
-                                                    <div class="btn-list">
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-icon btn-info-light"><i class="ri-pencil-line"></i></a>
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light"><i class="ri-delete-bin-line"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>#INV753159</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/12.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Stewart Rem</span>
-                                                            <span class="text-muted fs-12">remstew092@demo</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    21-05-2023
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-success">Paid</span>
-                                                </td>
-                                                <td>
-                                                    $7,546
-                                                </td>
-                                                <td>
-                                                    <div class="btn-list">
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-icon btn-info-light"><i class="ri-pencil-line"></i></a>
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light"><i class="ri-delete-bin-line"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>#INV369874</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/3.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Elliot Yun</span>
-                                                            <span class="text-muted fs-12">eiiliot000@demo</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    18-05-2023
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-primary">Overdue</span>
-                                                </td>
-                                                <td>
-                                                    $7,541
-                                                </td>
-                                                <td>
-                                                    <div class="btn-list">
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-icon btn-info-light"><i class="ri-pencil-line"></i></a>
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light"><i class="ri-delete-bin-line"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>#INV123456</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center lh-1">
-                                                        <div class="me-2">
-                                                            <span class="avatar avatar-md avatar-rounded">
-                                                                <img src="../assets/images/faces/5.jpg" alt="">
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="d-block fw-semibold mb-1">Gretchen Xio</span>
-                                                            <span class="text-muted fs-12">gretchenxio999@demo</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    20-05-2023
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-warning">Pending</span>
-                                                </td>
-                                                <td>
-                                                   $2,541
-                                                </td>
-                                                <td>
-                                                    <div class="btn-list">
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-icon btn-info-light"><i class="ri-pencil-line"></i></a>
-                                                        <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light"><i class="ri-delete-bin-line"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            @endfor
                                         </tbody>
                                     </table>
                                 </div>
@@ -777,5 +609,7 @@
                     </div>
                 </div>
                 <!-- End::row-3 -->
+
+                @endif
 </main>
 @section('title','DashBoard')

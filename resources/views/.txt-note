@@ -6,11 +6,13 @@ git stash push --include-untracked
 
 composer dump-autoload
 
+
+php artisan make:model Location --migration
 php artisan make:model Customer --migration
 
 php artisan make:livewire pages/auth/loginComponent
-
 php artisan make:livewire pages/adminDashboardComponent
+php artisan make:livewire pages/data/locationComponent
 
 php artisan serve --host 0.0.0.0
 

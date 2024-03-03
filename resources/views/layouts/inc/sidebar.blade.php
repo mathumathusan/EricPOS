@@ -3,12 +3,12 @@
     <!-- Start::main-sidebar-header -->
     <div class="main-sidebar-header">
         <a href="{{ route('dashboard') }}" class="header-logo">
-            <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
-            <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
-            <img src="../assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
-            <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
-            <img src="../assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
-            <img src="../assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+            <img src="{{ asset('assets/images/lonceybiz/loncey_semi.png') }}" alt="logo" class="desktop-logo">
+            <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-logo">
+            <img src="{{ asset('assets/images/lonceybiz/loncey_semi.png') }}" alt="logo" class="desktop-dark">
+            <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-dark">
+            <img src="{{ asset('assets/images/lonceybiz/loncey-logo.png') }}" alt="logo" class="desktop-white">
+            <img src="{{ asset('assets/images/lonceybiz/favicon.png') }}" alt="logo" class="toggle-white">
         </a>
     </div>
     <!-- End::main-sidebar-header -->
@@ -23,13 +23,20 @@
             </div>
             <ul class="main-menu">
                 <!-- Start::slide__category -->
-                <li class="slide__category"><span class="category-name">Main</span></li>
+                <li class="slide__category"><span class="category-name">Loncey Biz</span></li>
                 <!-- End::slide__category -->
 
                 <li class="slide">
-                    <a href="{{ route('dashboard') }}" class="side-menu__item">
-                        <i class="bx bx-gift side-menu__icon"></i>
+                    <a href="{{ route('dashboard') }}" class="side-menu__item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                        <i class="bx bx-home side-menu__icon"></i>
                         <span class="side-menu__label">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="slide">
+                    <a href="{{ route('locations') }}" class="side-menu__item {{ request()->routeIs('locations') ? 'active' : '' }}">
+                        <i class="bx bx-map side-menu__icon"></i>
+                        <span class="side-menu__label">Locations</span>
                     </a>
                 </li>
 

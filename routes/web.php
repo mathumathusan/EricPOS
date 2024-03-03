@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Livewire\Pages\Auth\LoginComponent;
 use App\Http\Controllers\Auth\loginController;
 use App\Livewire\Pages\AdminDashboardComponent;
+use App\Livewire\Pages\Data\LocationComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,11 @@ Route::get('/', function () {
 
 // Route::get('/login', [loginController::class,'login'])->name('login');
 Route::get('/login', LoginComponent::class)->name('login');
+Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
 
-Route::get('/dashboard', AdminDashboardComponent::class)->name('dashboard');
+    Route::get('/', AdminDashboardComponent::class)->name('dashboard');
 
-Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+    Route::get('/locations', LocationComponent::class)->name('locations');
+
+    Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+});

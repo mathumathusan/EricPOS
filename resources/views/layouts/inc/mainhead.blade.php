@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="dark" data-toggled="close">
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light"  loader="enable" data-header-styles="light" data-menu-styles="dark" data-toggled="close" style="--primary-rgb: 58, 88, 146;">
 
 <head>
 
@@ -14,7 +14,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/lonceybiz/favicon.png') }}" type="image/x-icon">
 
     <!-- Choices JS -->
     <script src="{{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
@@ -43,4 +43,6 @@
 
     <!-- Choices Css -->
     <link rel="stylesheet" href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
