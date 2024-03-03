@@ -28,6 +28,11 @@ class LoginComponent extends Component
         if (Auth::check()) {
             return redirect()->route('dashboard');
         }
+
+        if (app()->environment('local')) {
+            $this->username = 'raj';
+            $this->password = 'raj';
+        }
     }
 
 

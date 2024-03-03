@@ -24,5 +24,7 @@ class Location extends Model
 
     protected $casts = [
         'social_media' => 'json',
+        'is_active' => 'boolean',
+
     ];
 }

@@ -2,12 +2,16 @@
 
 namespace App\Livewire\Pages;
 
+use App\Models\Location;
 use Livewire\Component;
 
 class AdminDashboardComponent extends Component
 {
     public function render()
     {
-        return view('livewire.pages.admin-dashboard-component');
+        $count = [
+           'store' => Location::whereIsActive(true)->get()->count(),
+        ];
+        return view('livewire.pages.admin-dashboard-component',compact('count'));
     }
 }

@@ -34,6 +34,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
+    @stack('custom-style')
 </head>
 
 <body>
@@ -107,6 +108,8 @@
 
     </script>
 
+
+@stack('custom-script')
 </body>
 
 </html>

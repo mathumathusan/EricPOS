@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light"  loader="enable" data-header-styles="light" data-menu-styles="dark" data-toggled="close" style="--primary-rgb: 58, 88, 146;">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr" data-nav-layout="vertical" data-theme-mode="light"  loader="enable" data-header-styles="light" data-menu-styles="dark" data-toggled="close" style="--primary-rgb: 58, 88, 146;">
 
 <head>
 
@@ -46,3 +46,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
+    <!-- Custom Css -->
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" >
+
+    @stack('custom-style')

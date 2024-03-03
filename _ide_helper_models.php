@@ -25,7 +25,7 @@ namespace App\Models{
  * @property string|null $website
  * @property array|null $social_media
  * @property string $default_language
- * @property int $is_active
+ * @property bool $is_active
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Location newModelQuery()
