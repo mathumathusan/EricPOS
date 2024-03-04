@@ -53,8 +53,8 @@
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
+                <li class="slide has-sub {{ request()->routeIs(['users','user-permissions','user-roles','users.add']) ? 'active open' : '' }}">
+                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['users','user-permissions','user-roles','users.add']) ? 'active' : '' }}">
                         <i class="bx bx-group side-menu__icon"></i>
                         <span class="side-menu__label">Users</span>
                         <i class="fe fe-chevron-right side-menu__angle"></i>
@@ -64,21 +64,21 @@
                             <a href="javascript:void(0)">Users</a>
                         </li>
                         <li class="slide">
-                            <a href="{{ route('users') }}" class="side-menu__item">All Users</a>
+                            <a href="{{ route('users') }}" class="side-menu__item {{ request()->routeIs('users') ? 'active' : '' }}">All Users</a>
                         </li>
                         @can('view_permissions')
                         <li class="slide">
-                            <a href="{{ route('user-permissions') }}" class="side-menu__item">Permissions</a>
+                            <a href="{{ route('user-permissions') }}" class="side-menu__item {{ request()->routeIs('user-permissions') ? 'active' : '' }}">Permissions</a>
                         </li>
                         @endcan
                         @can('view_roles')
                         <li class="slide">
-                            <a href="{{ route('user-roles') }}" class="side-menu__item">Roles</a>
+                            <a href="{{ route('user-roles') }}" class="side-menu__item {{ request()->routeIs('user-roles') ? 'active' : '' }}">Roles</a>
                         </li>
                         @endcan
                         @can('add_users')
                         <li class="slide">
-                            <a href="{{ route('users.add') }}" class="side-menu__item">New User</a>
+                            <a href="{{ route('users.add') }}" class="side-menu__item {{ request()->routeIs('users.add') ? 'active' : '' }}">New User</a>
                         </li>
                         @endcan
                     </ul>
