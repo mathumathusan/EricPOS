@@ -18,32 +18,44 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         User::truncate();
-        // Survey::truncate();
-        // SurveyResponse::truncate();
-        // DB::table('role_has_permissions')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-
         // Create User
+
+        echo '----------- User Seeding Start----------------'."\n";
+
         $user = User::create([
             'name' => 'Loncey Tech',
-            'email' => 'admin@lonceytech.com',
+            'username' => 'lonceytech',
+            'email' => 'raj@lonceytech.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('admin@lonceytech.com'),
+            'password' => Hash::make('lonceytech'),
         ]);
         $user->assignRole('super-admin');
 
 
         $user = User::create([
-            'name' => 'Admin',
-            'email' => 'admin@test.com',
+            'name' => 'Raj Creation',
+            'username' => 'raj',
+            'email' => 'rajcrea@gmail.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('admin@test.com'),
+            // 'api_token' => 'L46rZ5aJnr^#6deEoF^f',
+            'password' => Hash::make('raj'),
         ]);
-        $user->assignRole('Super User');
+        $user->assignRole('admin');
+
+
+        // $user = User::create([
+        //     'name' => 'Web User',
+        //     'email' => 'web@gmail.com',
+        //     'email_verified_at' => now(),
+        //     'password' => Hash::make('web@gmail.com'),
+        // ]);
+        // $user->assignRole('author');
+
+        echo '----------- User Seeding End----------------'."\n\n";
 
     }
 }

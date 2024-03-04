@@ -6,10 +6,13 @@
             <div class="card custom-card">
                 <div class="card-header justify-content-between">
                     <div class="card-title"> Manage Locations </div>
-                    <div class="d-flex"> <button
+                    <div class="d-flex">
+                        @can('add_location')
+                        <button
                             class="btn btn-sm btn-primary btn-wave waves-light waves-effect waves-light"  data-bs-toggle="modal"
                             data-bs-target="#locationmodal"><i
                                 class="ri-add-line fw-semibold align-middle me-1"></i> Create Location</button>
+                                @endcan
                     </div>
                 </div>
                 <div class="card-body">
@@ -38,11 +41,15 @@
                                         <div class="hstack gap-2 fs-15">
                                             {{-- <a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"><i
                                                     class="ri-eye-line"></i></a> --}}
-                                            <span  wire:click.prevent="edit({{ $location->id }})" data-bs-toggle="modal"
+                                                    @can('edit_location')
+                                                      <span  wire:click.prevent="edit({{ $location->id }})" data-bs-toggle="modal"
                                             data-bs-target="#locationmodal" class="btn btn-icon btn-sm btn-info"><i
                                                     class="ri-edit-line"></i></span>
+                                                    @endcan
+                                                    @can('delete_location')
                                             <span class="btn btn-icon btn-sm btn-danger"  wire:click.prevent="deleteConfirm({{ $location->id }})"><i
                                                     class="ri-delete-bin-6-line"></i></span>
+                                                    @endcan
 
                                         </div>
                                     </td>

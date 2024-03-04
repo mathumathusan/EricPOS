@@ -14,6 +14,12 @@ php artisan make:livewire pages/auth/loginComponent
 php artisan make:livewire pages/adminDashboardComponent
 php artisan make:livewire pages/data/locationComponent
 
+php artisan make:livewire pages/user/userListComponent
+php artisan make:livewire pages/user/userComponent
+php artisan make:livewire pages/user/userPermissionComponent
+php artisan make:livewire pages/user/userRoleComponent
+php artisan make:livewire pages/user/userRolePermissionComponent
+
 php artisan serve --host 0.0.0.0
 
 php artisan serve --port=8001
