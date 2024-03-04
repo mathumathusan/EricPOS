@@ -66,9 +66,9 @@
             </div>
         </div>
     </div>
-
+    @can(['add_location', 'edit_location'])
 @include('modals.location')
-
+@endcan
 </main>
 @section('title', 'Locations')
 

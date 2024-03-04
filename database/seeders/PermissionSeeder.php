@@ -35,9 +35,9 @@ class PermissionSeeder extends Seeder
             ['name' => 'delete_users','display_name'=>'Delete Users','permission_module_id'=>PermissionModule::where('name','User')->first()->id],
 
             ['name' => 'view_permissions','display_name'=>'View Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
-            ['name' => 'Add_permission','display_name'=>'Add Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
-            ['name' => 'Edit_permission','display_name'=>'Edit Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
-            ['name' => 'Delete_permission','display_name'=>'Delete Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
+            ['name' => 'add_permission','display_name'=>'Add Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
+            ['name' => 'edit_permission','display_name'=>'Edit Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
+            ['name' => 'delete_permission','display_name'=>'Delete Permissions','permission_module_id'=>PermissionModule::where('name','User Permission')->first()->id],
 
             ['name' => 'view_roles','display_name'=>'View Roles','permission_module_id'=>PermissionModule::where('name','User Role')->first()->id],
             ['name' => 'add_role','display_name'=>'Add Roles','permission_module_id'=>PermissionModule::where('name','User Role')->first()->id],
