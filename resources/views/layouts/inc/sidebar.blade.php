@@ -97,6 +97,40 @@
 
                 @endcan
 
+
+                @can('view_products')
+                <!-- Start::slide__category -->
+                <li class="slide__category"><span class="category-names">Products</span></li>
+                <!-- End::slide__category -->
+
+                <!-- Start::slide -->
+                <li class="slide has-sub {{ request()->routeIs(['brands']) ? 'active open' : '' }}">
+                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['brands']) ? 'active' : '' }}">
+                        <i class="bx bx-group side-menu__icon"></i>
+                        <span class="side-menu__label">Products</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide side-menu__label1">
+                            <a href="javascript:void(0)">Products</a>
+                        </li>
+                        <li class="slide">
+                            <a href="#" class="side-menu__item {{ request()->routeIs('products') ? 'active' : '' }}">Products</a>
+                        </li>
+                        @can('view_brands')
+                        <li class="slide">
+                            <a href="{{ route('brands') }}" class="side-menu__item {{ request()->routeIs('brands') ? 'active' : '' }}">Brands</a>
+                        </li>
+                        @endcan
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+                @endcan
+
+
+
+
                 @if (false)
 
 

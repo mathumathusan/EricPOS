@@ -64,6 +64,12 @@ class PermissionSeeder extends Seeder
             ['name' => 'edit_product', 'display_name' => 'Edit Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'delete_product', 'display_name' => 'Delete Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
 
+            ['name' => 'view_brands', 'display_name' => 'View Brands', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'add_brand', 'display_name' => 'Add Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'edit_brand', 'display_name' => 'Edit Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'delete_brand', 'display_name' => 'Delete Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+
+
             ['name' => 'view_purchases', 'display_name' => 'View Purchases', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],
             ['name' => 'add_purchase', 'display_name' => 'Add Purchase', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],
             ['name' => 'edit_draft_purchase', 'display_name' => 'Edit Draft Purchase', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],

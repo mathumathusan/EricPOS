@@ -45,6 +45,10 @@ class RoleSeeder extends Seeder
             'edit_product',
             'delete_product',
 
+            'view_brands',
+            'add_brand',
+            'edit_brand',
+            'delete_brand',
 
             'view_products',
             'add_product',
@@ -74,6 +78,11 @@ class RoleSeeder extends Seeder
             'add_product',
             'edit_product',
 
+            'view_brands',
+            'add_brand',
+            'edit_brand',
+            'delete_brand',
+
             'view_customers',
             'add_customer',
             'edit_customer',
@@ -96,6 +105,8 @@ class RoleSeeder extends Seeder
             'view_products',
             'view_dashboard',
             'manage_profile',
+
+            'view_brands',
 
             'view_customers',
             'add_customer',
