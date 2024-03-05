@@ -13,6 +13,44 @@
 
 namespace App\Models{
 /**
+ * App\Models\Customer
+ *
+ * @property int $id
+ * @property string $cus_id
+ * @property int $location_id
+ * @property string $cus_name
+ * @property string|null $email
+ * @property string|null $address
+ * @property string|null $dob
+ * @property string|null $mobile
+ * @property string|null $phone
+ * @property string|null $remark
+ * @property bool $is_active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Location $location
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCusId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCusName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereDob($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereLocationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereRemark($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereUpdatedAt($value)
+ */
+	class Customer extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Location
  *
  * @property int $id
@@ -73,9 +111,19 @@ namespace App\Models{
 /**
  * App\Models\Setting
  *
+ * @property int $id
+ * @property string $name
+ * @property string|null $value
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Setting newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Setting newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Setting query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereValue($value)
  */
 	class Setting extends \Eloquent {}
 }

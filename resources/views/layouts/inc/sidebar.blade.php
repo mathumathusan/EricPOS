@@ -47,6 +47,16 @@
                 </li>
                 @endcan
 
+                @can('view_customers')
+                <li class="slide">
+                    <a href="{{ route('customers') }}"
+                        class="side-menu__item {{ request()->routeIs('customers') ? 'active' : '' }}">
+                        <i class="bx bx-user-pin side-menu__icon"></i>
+                        <span class="side-menu__label">Customers</span>
+                    </a>
+                </li>
+                @endcan
+
                 @can('view_users')
                 <!-- Start::slide__category -->
                 <li class="slide__category"><span class="category-name">Users & Permissions</span></li>

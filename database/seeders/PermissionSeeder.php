@@ -54,6 +54,11 @@ class PermissionSeeder extends Seeder
             ['name' => 'edit_location', 'display_name' => 'Edit Location', 'permission_module_id' => PermissionModule::where('name', 'Location')->first()->id],
             ['name' => 'delete_location', 'display_name' => 'Delete Location', 'permission_module_id' => PermissionModule::where('name', 'Location')->first()->id],
 
+            ['name' => 'view_customers', 'display_name' => 'View Customers', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'add_customer', 'display_name' => 'Add Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'edit_customer', 'display_name' => 'Edit Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'delete_customer', 'display_name' => 'Delete Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+
             ['name' => 'view_products', 'display_name' => 'View Products', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'add_product', 'display_name' => 'Add Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'edit_product', 'display_name' => 'Edit Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],

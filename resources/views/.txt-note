@@ -13,6 +13,7 @@ php artisan make:model Customer --migration
 php artisan make:livewire pages/auth/loginComponent
 php artisan make:livewire pages/adminDashboardComponent
 php artisan make:livewire pages/data/locationComponent
+php artisan make:livewire pages/data/customerComponent
 
 php artisan make:livewire pages/user/userListComponent
 php artisan make:livewire pages/user/userComponent

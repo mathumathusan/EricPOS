@@ -23,6 +23,7 @@ class PermissionGroupSeeder extends Seeder
             ['name' => 'Dashboard'],
             ['name' => 'Admin'],
             ['name' => 'Location'],
+            ['name' => 'Customer'],
             ['name' => 'Product'],
             ['name' => 'Purchase'],
             ['name' => 'Payment'],

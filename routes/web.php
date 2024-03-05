@@ -9,6 +9,7 @@ use App\Livewire\Pages\Data\LocationComponent;
 use App\Livewire\Pages\User\UserListComponent;
 use App\Livewire\Pages\User\UserRoleComponent;
 use App\Livewire\Pages\AdminDashboardComponent;
+use App\Livewire\Pages\Data\CustomerComponent;
 use App\Livewire\Pages\User\UserPermissionComponent;
 use App\Livewire\Pages\User\UserRolePermissionComponent;
 
@@ -45,5 +46,6 @@ Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
     Route::get('/user-role/create', UserRolePermissionComponent::class)->middleware(['permission:add_role'])->name('user-role-permissions-create');
 
     Route::get('/locations', LocationComponent::class)->middleware(['permission:view_locations'])->name('locations');
+    Route::get('/customers', CustomerComponent::class)->middleware(['permission:view_customers'])->name('customers');
 
 });
