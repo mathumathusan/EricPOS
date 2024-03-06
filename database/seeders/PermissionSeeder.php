@@ -69,6 +69,10 @@ class PermissionSeeder extends Seeder
             ['name' => 'edit_brand', 'display_name' => 'Edit Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
             ['name' => 'delete_brand', 'display_name' => 'Delete Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
 
+            ['name' => 'view_categories', 'display_name' => 'View Categories', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'add_category', 'display_name' => 'Add Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'edit_category', 'display_name' => 'Edit Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'delete_category', 'display_name' => 'Delete Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
 
             ['name' => 'view_purchases', 'display_name' => 'View Purchases', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],
             ['name' => 'add_purchase', 'display_name' => 'Add Purchase', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],

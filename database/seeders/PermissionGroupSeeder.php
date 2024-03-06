@@ -25,8 +25,11 @@ class PermissionGroupSeeder extends Seeder
             ['name' => 'Location'],
             ['name' => 'Customer'],
             ['name' => 'Product'],
+            ['name' => 'Category'],
             ['name' => 'Brand'],
             ['name' => 'Purchase'],
+            ['name' => 'Sales'],
+            ['name' => 'Job'],
             ['name' => 'Payment'],
           ];
 

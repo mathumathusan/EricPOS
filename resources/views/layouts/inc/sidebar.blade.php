@@ -104,8 +104,8 @@
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
-                <li class="slide has-sub {{ request()->routeIs(['brands']) ? 'active open' : '' }}">
-                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['brands']) ? 'active' : '' }}">
+                <li class="slide has-sub {{ request()->routeIs(['brands','categories']) ? 'active open' : '' }}">
+                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['brands','categories']) ? 'active' : '' }}">
                         <i class="bx bx-group side-menu__icon"></i>
                         <span class="side-menu__label">Products</span>
                         <i class="fe fe-chevron-right side-menu__angle"></i>
@@ -120,6 +120,11 @@
                         @can('view_brands')
                         <li class="slide">
                             <a href="{{ route('brands') }}" class="side-menu__item {{ request()->routeIs('brands') ? 'active' : '' }}">Brands</a>
+                        </li>
+                        @endcan
+                        @can('view_categories')
+                        <li class="slide">
+                            <a href="{{ route('categories') }}" class="side-menu__item {{ request()->routeIs('categories') ? 'active' : '' }}">Categories</a>
                         </li>
                         @endcan
                     </ul>
