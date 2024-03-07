@@ -50,7 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         <div class="mb-3">
                             <label class="form-label">Customer Code</label>
                             <input type="text" class="form-control @error('customer.cus_id') is-invalid @enderror"
@@ -63,7 +63,7 @@
                             @enderror
 
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-6">
                         <div class="mb-3">
@@ -124,7 +124,7 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
 
                         <div class="mb-3">
                             <label class="form-label">Address</label>

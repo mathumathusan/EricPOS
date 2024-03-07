@@ -75,29 +75,24 @@ class CustomerComponent extends Component
             # code...
             $this->validate(
                 [
-                    'customer.cus_id' => 'required|string|max:255',
                     'customer.location_id' => 'required|string|max:50',
                     'customer.cus_name' => 'nullable|string|max:255',
                     'customer.email' => 'nullable|string|max:20',
                     'customer.address' => 'nullable|string|max:20',
                     'customer.dob' => 'nullable|max:255',
                     'customer.mobile' => 'nullable|max:255',
-                    'customer.phone' => 'nullable',
-                    'customer.remark' => 'nullable',
-                    'customer.is_active' => 'nullable',
-
                 ],
                 [
-                    'customer.cus_id.required' => 'The Customer ID is a required.',
+                    'customer.cus_name.required' => 'The Customer Name is a required.',
                 ]
             );
         } else {
             $this->validate(
                 [
-                    'customer.cus_id' => 'required',
+                    'customer.cus_name' => 'required',
                 ],
                 [
-                    'customer.cus_id.required' => 'The Customer ID is a required.',
+                    'customer.cus_name.required' => 'The Customer Name is a required.',
                 ]
             );
         }

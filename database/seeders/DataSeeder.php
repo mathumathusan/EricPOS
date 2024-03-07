@@ -18,7 +18,7 @@ class DataSeeder extends Seeder
 
         $location = Location::create([
             'name' => 'Jaffna Main Branch',
-            'store_code' => 'jfn',
+            'store_code' => 'JFN',
             'address' => 'No.566,564 Hospital road, Jaffna, Sri Lanka',
             'phone' => '0212 222 486',
             'mobile' => '077 993 3965',

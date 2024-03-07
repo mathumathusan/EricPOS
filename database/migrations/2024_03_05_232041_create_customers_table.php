@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('cus_id')->unique(); // Assuming a unique identifier for customers (location-based)
+            $table->string('cus_code')->unique();
             $table->unsignedBigInteger('location_id');
             $table->string('cus_name');
             $table->string('email')->nullable();

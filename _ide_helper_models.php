@@ -16,16 +16,45 @@ namespace App\Models{
  * App\Models\Brand
  *
  * @property int $id
+ * @property string $brand_name
+ * @property string|null $brand_code
+ * @property bool $is_active
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Brand newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Brand newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Brand query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Brand whereBrandCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Brand whereBrandName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Brand whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Brand whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Brand whereIsActive($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Brand whereUpdatedAt($value)
  */
 	class Brand extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Category
+ *
+ * @property int $id
+ * @property string $category_name
+ * @property string|null $category_code
+ * @property bool $is_active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCategoryCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCategoryName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
+ */
+	class Category extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -34,6 +63,7 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $cus_id
+ * @property string $cus_code
  * @property int $location_id
  * @property string $cus_name
  * @property string|null $email
@@ -51,6 +81,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Customer query()
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCusCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCusId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereCusName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereDob($value)

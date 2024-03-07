@@ -38,7 +38,7 @@
                                     @can('super-admin')
                                     <td>{{ $customer->id }}</td>
                                     @endcan
-                                    <td><span class="badge bg-primary-transparent">{{ $customer->cus_id }}</span></td>
+                                    <td><span class="badge bg-primary-transparent">{{ $customer->cus_code }}</span></td>
 
                                     <td class="fw-bold">{{ $customer->cus_name   }}</td>
                                     <td>{{ $customer->location->name  }}</td>
