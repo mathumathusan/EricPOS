@@ -72,10 +72,12 @@ namespace App\Models{
  * @property string|null $mobile
  * @property string|null $phone
  * @property string|null $remark
+ * @property int|null $user_id
  * @property bool $is_active
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Location $location
+ * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder|Customer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Customer newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Customer query()
@@ -93,6 +95,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Customer wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereRemark($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Customer whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Customer whereUserId($value)
  */
 	class Customer extends \Eloquent {}
 }

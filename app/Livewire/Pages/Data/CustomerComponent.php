@@ -14,7 +14,6 @@ class CustomerComponent extends Component
 
     public $customer = [
         'id' => '',
-        'cus_id' => '',
         'location_id' => '',
         'cus_name' => '',
         'email' => '',
@@ -23,6 +22,7 @@ class CustomerComponent extends Component
         'mobile' => '',
         'phone' => '',
         'remark' => '',
+        'user_id'=>'',
         'is_active' => false,
     ];
 
@@ -48,7 +48,6 @@ class CustomerComponent extends Component
 
             $this->customer = [
                 'id' => $customer->id,
-                'cus_id' => $customer->cus_id,
                 'location_id' => $customer->location_id,
                 'cus_name' => $customer->cus_name,
                 'email' => $customer->email,
@@ -57,6 +56,7 @@ class CustomerComponent extends Component
                 'mobile' =>$customer->mobile,
                 'phone' => $customer->phone,
                 'remark' => $customer->remark,
+                'user_id' => $customer->user_id,
                 'is_active' => $customer->is_active,
             ];
         } else {
@@ -101,7 +101,6 @@ class CustomerComponent extends Component
 
             $customer = $this->customer['id'] ? Customer::findOrFail($this->customer['id'])  : new Customer;
 
-            $customer->cus_id = $this->customer['cus_id'];
             $customer->location_id = $this->customer['location_id'];
             $customer->cus_name = $this->customer['cus_name'];
             $customer->email = $this->customer['email'];
@@ -110,8 +109,8 @@ class CustomerComponent extends Component
             $customer->mobile = $this->customer['mobile'];
             $customer->phone = $this->customer['phone'];
             $customer->remark = $this->customer['remark'];
+            $customer->user_id = $this->customer['user_id'] ? $this->customer['user_id'] : userID();
             $customer->is_active = $this->customer['is_active'];
-
 
             // Save the customer data here
             $customer->save();
@@ -154,7 +153,6 @@ class CustomerComponent extends Component
 
         $this->customer = [
             'id' => '',
-            'cus_id' => '',
             'location_id' => '',
             'cus_name' => '',
             'email' => '',
@@ -163,6 +161,7 @@ class CustomerComponent extends Component
             'mobile' => '',
             'phone' => '',
             'remark' => '',
+            'user_id'=>'',
             'is_active' => false,
         ];
     }

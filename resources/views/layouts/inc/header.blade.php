@@ -52,14 +52,14 @@
             <div class="header-element country-selector">
                 <!-- Start::header-link|dropdown-toggle -->
                 <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown">
-                    <img src="../assets/images/flags/us_flag.jpg" alt="img" class="rounded-circle header-link-icon">
+                    <img src="{{ asset('/assets/images/flags/us_flag.jpg') }}" alt="img" class="rounded-circle header-link-icon">
                 </a>
                 <!-- End::header-link|dropdown-toggle -->
                 <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/us_flag.jpg" alt="img">
+                                <img src="{{ asset('/assets/images/flags/us_flag.jpg') }}" alt="img">
                             </span>
                             English
                         </a>
@@ -67,7 +67,7 @@
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/spain_flag.jpg" alt="img" >
+                                <img src="{{ asset('/assets/images/flags/spain_flag.jpg') }}" alt="img" >
                             </span>
                             Spanish
                         </a>
@@ -75,7 +75,7 @@
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/french_flag.jpg" alt="img" >
+                                <img src="{{ asset('/assets/images/flags/french_flag.jpg') }}" alt="img" >
                             </span>
                             French
                         </a>
@@ -83,7 +83,7 @@
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/germany_flag.jpg" alt="img" >
+                                <img src="{{ asset('/assets/images/flags/germany_flag.jpg') }}" alt="img" >
                             </span>
                             German
                         </a>
@@ -91,7 +91,7 @@
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/italy_flag.jpg" alt="img" >
+                                <img src="{{ asset('/assets/images/flags/italy_flag.jpg') }}" alt="img" >
                             </span>
                             Italian
                         </a>
@@ -99,7 +99,7 @@
                     <li>
                         <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                             <span class="avatar avatar-xs lh-1 me-2">
-                                <img src="../assets/images/flags/russia_flag.jpg" alt="img" >
+                                <img src="{{ asset('/assets/images/flags/russia_flag.jpg') }}" alt="img" >
                             </span>
                             Russian
                         </a>
@@ -149,7 +149,7 @@
                     <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
                         <li class="dropdown-item">
                             <div class="d-flex align-items-start cart-dropdown-item">
-                                <img src="../assets/images/ecommerce/jpg/1.jpg" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
+                                <img src="{{ asset('/assets/images/ecommerce/jpg/1.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-start justify-content-between mb-0">
                                         <div class="mb-0 fs-13 text-dark fw-semibold">
@@ -171,7 +171,7 @@
                         </li>
                         <li class="dropdown-item">
                             <div class="d-flex align-items-start cart-dropdown-item">
-                                <img src="../assets/images/ecommerce/jpg/3.jpg" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
+                                <img src="{{ asset('/assets/images/ecommerce/jpg/3.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-start justify-content-between mb-0">
                                         <div class="mb-0 fs-13 text-dark fw-semibold">
@@ -193,7 +193,7 @@
                         </li>
                         <li class="dropdown-item">
                             <div class="d-flex align-items-start cart-dropdown-item">
-                                <img src="../assets/images/ecommerce/jpg/5.jpg" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
+                                <img src="{{ asset('/assets/images/ecommerce/jpg/5.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-start justify-content-between mb-0">
                                         <div class="mb-0 fs-13 text-dark fw-semibold">
@@ -214,7 +214,7 @@
                         </li>
                         <li class="dropdown-item">
                             <div class="d-flex align-items-start cart-dropdown-item">
-                                <img src="../assets/images/ecommerce/jpg/4.jpg" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
+                                <img src="{{ asset('/assets/images/ecommerce/jpg/4.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-start justify-content-between mb-0">
                                         <div class="mb-0 fs-13 text-dark fw-semibold">
@@ -236,7 +236,7 @@
                         </li>
                         <li class="dropdown-item">
                             <div class="d-flex align-items-start cart-dropdown-item">
-                                <img src="../assets/images/ecommerce/jpg/6.jpg" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
+                                <img src="{{ asset('/assets/images/ecommerce/jpg/6.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded br-5 me-3">
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-start justify-content-between mb-0">
                                         <div class="mb-0 fs-13 text-dark fw-semibold">
@@ -417,7 +417,7 @@
                                <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/figma.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/figma.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Figma</span>
                                     </div>
@@ -427,7 +427,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/microsoft-powerpoint.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/microsoft-powerpoint.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Power Point</span>
                                     </div>
@@ -437,7 +437,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/microsoft-word.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/microsoft-word.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">MS Word</span>
                                     </div>
@@ -447,7 +447,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/calender.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/calender.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Calendar</span>
                                     </div>
@@ -457,7 +457,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/sketch.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/sketch.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Sketch</span>
                                     </div>
@@ -467,7 +467,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/google-docs.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/google-docs.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Docs</span>
                                     </div>
@@ -477,7 +477,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/google.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/google.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Google</span>
                                     </div>
@@ -487,7 +487,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/translate.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/translate.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Translate</span>
                                     </div>
@@ -497,7 +497,7 @@
                                 <a href="javascript:void(0);">
                                     <div class="text-center p-3 related-app">
                                         <span class="avatar avatar-sm avatar-rounded">
-                                            <img src="../assets/images/apps/google-sheets.png" alt="">
+                                            <img src="{{ asset('/assets/images/apps/google-sheets.png') }}" alt="">
                                         </span>
                                         <span class="d-block fs-12">Sheets</span>
                                     </div>

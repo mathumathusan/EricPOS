@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('mobile')->nullable();
             $table->string('phone')->nullable();
             $table->text('remark')->nullable();
+            $table->integer('user_id')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

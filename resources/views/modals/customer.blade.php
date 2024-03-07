@@ -129,7 +129,7 @@
                         <div class="mb-3">
                             <label class="form-label">Address</label>
                             <textarea class="form-control @error('customer.address') is-invalid @enderror"
-                                wire:model="customer.address" id="address" rows="1"></textarea>
+                                wire:model="customer.address" rows="1"></textarea>
                             @error('customer.address')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

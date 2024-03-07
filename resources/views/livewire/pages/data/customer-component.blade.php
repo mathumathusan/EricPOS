@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table text-nowrap table-bordered  table-striped table-hover">
+                        <table class="table text-nowrap table-bordered  table-sm table-striped table-hover">
                             <thead class="table-primary">
                                 <tr>
                                     @can('super-admin')
@@ -25,7 +25,8 @@
                                     @endcan
                                     <th scope="col">Customer Code</th>
                                     <th scope="col">Customer Name</th>
-
+                                    <th scope="col">Mobile Number</th>
+                                    <th scope="col">Phone Number</th>
                                     <th scope="col">Location</th>
 
                                     <th scope="col">Status</th>
@@ -38,11 +39,12 @@
                                     @can('super-admin')
                                     <td>{{ $customer->id }}</td>
                                     @endcan
-                                    <td><span class="badge bg-primary-transparent">{{ $customer->cus_code }}</span></td>
+                                    <td><h6><span class="badge bg-primary">{{ $customer->cus_code }}</span></h6></td>
 
                                     <td class="fw-bold">{{ $customer->cus_name   }}</td>
                                     <td>{{ $customer->location->name  }}</td>
-
+                                    <td>{{ $customer->mobile }}</td>
+                                    <td>{{ $customer->phone }}</td>
                                     <td> <h6><span class="badge bg-{{ $customer->is_active ? 'success' : 'danger' }}">{{ $customer->is_active ? 'Active' : 'Inactive' }}</span></h6> </td>
 
 
