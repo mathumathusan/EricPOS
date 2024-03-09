@@ -102,6 +102,29 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\FrameShape
+ *
+ * @property int $id
+ * @property string $name
+ * @property string|null $code_no
+ * @property bool $is_active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape query()
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereCodeNo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|FrameShape whereUpdatedAt($value)
+ */
+	class FrameShape extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Location
  *
  * @property int $id

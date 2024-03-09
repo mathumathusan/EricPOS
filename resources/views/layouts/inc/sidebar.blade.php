@@ -41,7 +41,7 @@
                 <li class="slide">
                     <a href="{{ route('locations') }}"
                         class="side-menu__item {{ request()->routeIs('locations') ? 'active' : '' }}">
-                        <i class="bx bx-map side-menu__icon"></i>
+                        <i class="bx bx-store-alt side-menu__icon"></i>
                         <span class="side-menu__label">Locations</span>
                     </a>
                 </li>
@@ -104,9 +104,9 @@
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
-                <li class="slide has-sub {{ request()->routeIs(['brands','categories']) ? 'active open' : '' }}">
-                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['brands','categories']) ? 'active' : '' }}">
-                        <i class="bx bx-group side-menu__icon"></i>
+                <li class="slide has-sub {{ request()->routeIs(['products','brands','categories','frame-shapes']) ? 'active open' : '' }}">
+                    <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(['products','brands','categories','frame-shapes']) ? 'active' : '' }}">
+                        <i class="bx bx-cube side-menu__icon"></i>
                         <span class="side-menu__label">Products</span>
                         <i class="fe fe-chevron-right side-menu__angle"></i>
                     </a>
@@ -115,7 +115,7 @@
                             <a href="javascript:void(0)">Products</a>
                         </li>
                         <li class="slide">
-                            <a href="#" class="side-menu__item {{ request()->routeIs('products') ? 'active' : '' }}">Products</a>
+                            <a href="{{ route('products') }}" class="side-menu__item {{ request()->routeIs('products') ? 'active' : '' }}">Products</a>
                         </li>
                         @can('view_brands')
                         <li class="slide">
@@ -125,6 +125,12 @@
                         @can('view_categories')
                         <li class="slide">
                             <a href="{{ route('categories') }}" class="side-menu__item {{ request()->routeIs('categories') ? 'active' : '' }}">Categories</a>
+                        </li>
+                        @endcan
+
+                        @can('view_frame_shapes')
+                        <li class="slide">
+                            <a href="{{ route('frame-shapes') }}" class="side-menu__item {{ request()->routeIs('frame-shapes') ? 'active' : '' }}">Frame Shapes</a>
                         </li>
                         @endcan
                     </ul>

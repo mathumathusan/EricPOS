@@ -55,6 +55,10 @@ class RoleSeeder extends Seeder
             'edit_product',
             'delete_product',
 
+            'view_frame_shapes',
+            'add_frame_shape',
+            'edit_frame_shape',
+            'delete_frame_shape',
 
             'view_categories',
             'add_category',
@@ -84,20 +88,22 @@ class RoleSeeder extends Seeder
             'add_product',
             'edit_product',
 
+
+            'view_frame_shapes',
+            'add_frame_shape',
+            'edit_frame_shape',
+
             'view_brands',
             'add_brand',
             'edit_brand',
-            'delete_brand',
 
             'view_categories',
             'add_category',
             'edit_category',
-            'delete_category',
 
             'view_customers',
             'add_customer',
             'edit_customer',
-            'delete_customer',
 
             'view_purchases',
             'add_purchase',
@@ -118,6 +124,8 @@ class RoleSeeder extends Seeder
             'manage_profile',
 
             'view_brands',
+
+            'view_frame_shapes',
 
             'view_categories',
 

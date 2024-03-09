@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-xxl-5 col-xl-12">
                         <div class="row">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                 <div class="card custom-card hrm-main-card primary">
                                     <div class="card-body">
                                         <div class="d-flex align-items-top">
@@ -17,7 +17,43 @@
                                             </div>
                                             <div class="flex-fill">
                                                 <span class="fw-semibold text-muted d-block mb-2">Stores</span>
-                                                <h5 class="fw-semibold mb-2">{{ $count['store'] }}</h5>
+                                                <h5 class="fw-semibold mb-2">{{ $count['stores'] }}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                <div class="card custom-card hrm-main-card primary">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-top">
+                                            <div class="me-3">
+                                                <span class="avatar bg-primary">
+                                                    <i class="ri-user-line fs-18"></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="fw-semibold text-muted d-block mb-2">Customers</span>
+                                                <h5 class="fw-semibold mb-2">{{ $count['customers'] }}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                <div class="card custom-card hrm-main-card primary">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-top">
+                                            <div class="me-3">
+                                                <span class="avatar bg-primary">
+                                                    <i class="ri-user-line fs-18"></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <span class="fw-semibold text-muted d-block mb-2">Products</span>
+                                                <h5 class="fw-semibold mb-2">{{ $count['products'] }}</h5>
                                             </div>
                                         </div>
                                     </div>

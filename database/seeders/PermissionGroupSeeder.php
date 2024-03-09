@@ -25,6 +25,7 @@ class PermissionGroupSeeder extends Seeder
             ['name' => 'Location'],
             ['name' => 'Customer'],
             ['name' => 'Product'],
+            ['name' => 'Frame Shape'],
             ['name' => 'Category'],
             ['name' => 'Brand'],
             ['name' => 'Purchase'],

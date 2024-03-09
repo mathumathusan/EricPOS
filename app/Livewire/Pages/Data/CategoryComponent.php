@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Pages\Data;
 
-use App\Models\Brand;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Log;

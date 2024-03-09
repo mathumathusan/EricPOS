@@ -69,6 +69,11 @@ class PermissionSeeder extends Seeder
             ['name' => 'edit_brand', 'display_name' => 'Edit Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
             ['name' => 'delete_brand', 'display_name' => 'Delete Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
 
+            ['name' => 'view_frame_shapes', 'display_name' => 'View Frame Shapes', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'add_frame_shape', 'display_name' => 'Add Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'edit_frame_shape', 'display_name' => 'Edit Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'delete_frame_shape', 'display_name' => 'Delete Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+
             ['name' => 'view_categories', 'display_name' => 'View Categories', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
             ['name' => 'add_category', 'display_name' => 'Add Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
             ['name' => 'edit_category', 'display_name' => 'Edit Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
