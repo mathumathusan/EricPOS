@@ -13,6 +13,7 @@ use App\Livewire\Pages\Data\BrandComponent;
 use App\Livewire\Pages\Data\CategoryComponent;
 use App\Livewire\Pages\Data\CustomerComponent;
 use App\Livewire\Pages\Data\FrameShapeComponent;
+use App\Livewire\Pages\Product\ProductComponent;
 use App\Livewire\Pages\Product\ProductListComponent;
 use App\Livewire\Pages\User\UserPermissionComponent;
 use App\Livewire\Pages\User\UserRolePermissionComponent;
@@ -52,6 +53,8 @@ Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
     Route::get('/locations', LocationComponent::class)->middleware(['permission:view_locations'])->name('locations');
     Route::get('/customers', CustomerComponent::class)->middleware(['permission:view_customers'])->name('customers');
     Route::get('/products', ProductListComponent::class)->middleware(['permission:view_products'])->name('products');
+    Route::get('/products/{id}', ProductComponent::class)->middleware(['permission:edit_product'])->name('products.edit');
+    Route::get('/products/create', ProductComponent::class)->middleware(['permission:add_product'])->name('products.add');
 
     Route::get('/brands', BrandComponent::class)->middleware(['permission:view_brands'])->name('brands');
     Route::get('/categories', CategoryComponent::class)->middleware(['permission:view_categories'])->name('categories');

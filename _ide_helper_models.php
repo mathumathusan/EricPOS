@@ -59,6 +59,35 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\CoatingBrand
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CoatingOption> $coatingOptions
+ * @property-read int|null $coating_options_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobFrame> $jobFrames
+ * @property-read int|null $job_frames_count
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingBrand newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingBrand newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingBrand query()
+ */
+	class CoatingBrand extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\CoatingOption
+ *
+ * @property-read \App\Models\CoatingBrand|null $coatingBrand
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobFrame> $jobFrames
+ * @property-read int|null $job_frames_count
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingOption newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingOption newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CoatingOption query()
+ */
+	class CoatingOption extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Customer
  *
  * @property int $id
@@ -125,6 +154,47 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\JobFrame
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|JobFrame newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobFrame newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobFrame query()
+ */
+	class JobFrame extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\JobOrder
+ *
+ * @property-read \App\Models\Customer|null $customer
+ * @property-read \App\Models\Location|null $location
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Sales> $sales
+ * @property-read int|null $sales_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\SalesItem> $salesItems
+ * @property-read int|null $sales_items_count
+ * @method static \Illuminate\Database\Eloquent\Builder|JobOrder newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobOrder newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobOrder query()
+ */
+	class JobOrder extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\JobPrescription
+ *
+ * @property-read \App\Models\JobOrder|null $jobOrder
+ * @property-read \App\Models\Product|null $product
+ * @method static \Illuminate\Database\Eloquent\Builder|JobPrescription newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobPrescription newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|JobPrescription query()
+ */
+	class JobPrescription extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Location
  *
  * @property int $id
@@ -179,6 +249,67 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionModule whereUpdatedAt($value)
  */
 	class PermissionModule extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Product
+ *
+ * @property int $id
+ * @property string $product_code
+ * @property int $category_id
+ * @property string $product_name
+ * @property string|null $product_img
+ * @property int $brand_id
+ * @property bool $is_active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Brand $brand
+ * @property-read \App\Models\Category $category
+ * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Product query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereBrandId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereIsActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereProductCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereProductImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereProductName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
+ */
+	class Product extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Sales
+ *
+ * @property-read \App\Models\Customer|null $customer
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\SalesItem> $items
+ * @property-read int|null $items_count
+ * @property-read \App\Models\JobOrder|null $jobOrder
+ * @property-read \App\Models\Location|null $location
+ * @method static \Illuminate\Database\Eloquent\Builder|Sales newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Sales newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Sales query()
+ */
+	class Sales extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\SalesItem
+ *
+ * @property-read \App\Models\JobOrder|null $jobOrder
+ * @property-read \App\Models\Product|null $product
+ * @property-read \App\Models\Sales|null $sale
+ * @method static \Illuminate\Database\Eloquent\Builder|SalesItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SalesItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SalesItem query()
+ */
+	class SalesItem extends \Eloquent {}
 }
 
 namespace App\Models{
