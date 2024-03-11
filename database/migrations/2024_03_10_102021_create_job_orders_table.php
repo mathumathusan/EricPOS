@@ -27,9 +27,12 @@ return new class extends Migration
             $table->integer('take_by')->nullable();
             $table->text('remarks')->nullable();
             $table->unsignedBigInteger('customer_id');
-            $table->string('status')->default('pending');
-            $table->timestamps();
 
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
+            $table->string('status')->default('pending');
+
+            $table->timestamps();
             // Foreign key constraints
             $table->foreign('location_id')->references('id')->on('locations');
             $table->foreign('customer_id')->references('id')->on('customers');

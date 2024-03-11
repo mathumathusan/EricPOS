@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('frame_shapes', function (Blueprint $table) {
+        Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('code_no')->nullable();
-            $table->boolean('is_active')->default(true);
-
+            $table->string('actual_name');
+            $table->string('short_name');
+            $table->boolean('allow_decimal')->default(0);
             $table->unsignedBigInteger('created_by');
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('frame_shapes');
+        Schema::dropIfExists('units');
     }
 };

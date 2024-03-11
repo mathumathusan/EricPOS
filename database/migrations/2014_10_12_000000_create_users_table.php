@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('name');
-            $table->string('email')->unique()->nullable();
+            $table->string('email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('profile_image')->nullable();
             $table->string('last_login_ip')->nullable();
@@ -23,7 +23,9 @@ return new class extends Migration
             $table->integer('login_attempts')->default(0);
             $table->boolean('is_blocked')->default(false);
             $table->string('password');
+            $table->char('language', 7)->default('en');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

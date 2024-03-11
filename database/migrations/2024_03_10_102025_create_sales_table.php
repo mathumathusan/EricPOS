@@ -23,6 +23,9 @@ return new class extends Migration
             $table->decimal('balance', 10, 2);
             $table->unsignedBigInteger('job_order_id')->nullable(); // Nullable as a sale may not always be associated with a job
             $table->string('status')->default('pending');
+
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
 
             // Foreign key constraints

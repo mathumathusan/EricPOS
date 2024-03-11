@@ -59,7 +59,7 @@
 
                 @can('view_users')
                 <!-- Start::slide__category -->
-                <li class="slide__category"><span class="category-name">Users & Permissions</span></li>
+                {{-- <li class="slide__category"><span class="category-name">Users & Permissions</span></li> --}}
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
@@ -100,7 +100,7 @@
 
                 @can('view_products')
                 <!-- Start::slide__category -->
-                <li class="slide__category"><span class="category-names">Products</span></li>
+                {{-- <li class="slide__category"><span class="category-names">Products</span></li> --}}
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->

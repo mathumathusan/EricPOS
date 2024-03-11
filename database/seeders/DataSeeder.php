@@ -27,6 +27,7 @@ class DataSeeder extends Seeder
             'social_media'=>[],
             'default_language'=>'en',
             'is_active'=>true,
+            'created_by'=>1,
         ]);
 
 
