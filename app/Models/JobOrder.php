@@ -11,6 +11,7 @@ class JobOrder extends Model
 
     protected $fillable = [
         'location_id',
+        'customer_id',
         'job_no',
         'job_code',
         'job_date',
@@ -21,9 +22,8 @@ class JobOrder extends Model
         'discount_amount',
         'balance_amount',
         'test_by',
-        'take_by',
         'remarks',
-        'customer_id',
+        'created_by',
         'status'
     ];
 
@@ -48,5 +48,5 @@ class JobOrder extends Model
     {
         return $this->hasMany(SalesItem::class, 'job_order_id');
     }
-    
+
 }

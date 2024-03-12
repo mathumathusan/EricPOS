@@ -22,7 +22,7 @@ class CustomerComponent extends Component
         'mobile' => '',
         'phone' => '',
         'remark' => '',
-        'user_id'=>'',
+        'created_by'=>'',
         'is_active' => false,
     ];
 
@@ -56,7 +56,7 @@ class CustomerComponent extends Component
                 'mobile' =>$customer->mobile,
                 'phone' => $customer->phone,
                 'remark' => $customer->remark,
-                'user_id' => $customer->user_id,
+                'created_by' => $customer->created_by,
                 'is_active' => $customer->is_active,
             ];
         } else {
@@ -109,7 +109,7 @@ class CustomerComponent extends Component
             $customer->mobile = $this->customer['mobile'];
             $customer->phone = $this->customer['phone'];
             $customer->remark = $this->customer['remark'];
-            $customer->user_id = $this->customer['user_id'] ? $this->customer['user_id'] : userID();
+            $customer->created_by = $this->customer['created_by'] ? $this->customer['created_by'] : userID();
             $customer->is_active = $this->customer['is_active'];
 
             // Save the customer data here
@@ -161,7 +161,7 @@ class CustomerComponent extends Component
             'mobile' => '',
             'phone' => '',
             'remark' => '',
-            'user_id'=>'',
+            'created_by'=>'',
             'is_active' => false,
         ];
     }

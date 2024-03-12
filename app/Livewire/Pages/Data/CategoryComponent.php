@@ -15,6 +15,7 @@ class CategoryComponent extends Component
         'id' => '',
         'category_name' => '',
         'category_code' => '',
+        'created_by' => '',
         'is_active' => false,
     ];
 
@@ -40,6 +41,7 @@ class CategoryComponent extends Component
                 'id' => $category->id,
                 'category_name' => $category->category_name,
                 'category_code' => $category->category_code,
+                'created_by' =>  $category->created_by,
                 'is_active' => $category->is_active,
             ];
         } else {
@@ -83,6 +85,7 @@ class CategoryComponent extends Component
 
             $category->category_name = $this->category['category_name'];
             $category->category_code = $this->category['category_code'];
+            $category->created_by = $this->category['created_by'] ? $this->category['created_by'] : userID();
             $category->is_active = $this->category['is_active'];
 
 
@@ -129,6 +132,7 @@ class CategoryComponent extends Component
             'id' => '',
             'category_name' => '',
             'category_code' => '',
+            'created_by' => '',
             'is_active' => false,
         ];
     }

@@ -24,8 +24,8 @@ return new class extends Migration
             $table->boolean('enable_stock')->default(0);
             $table->decimal('alert_quantity', 22, 4)->default(0);
             $table->enum('barcode_type', ['C39','C128','EAN13','EAN8','UPCA','UPCE'])->default('C128');
-            $table->boolean('is_active')->default(true);
             $table->unsignedBigInteger('created_by');
+            $table->boolean('is_active')->default(true);
             $table->softDeletes();
             $table->timestamps();
 

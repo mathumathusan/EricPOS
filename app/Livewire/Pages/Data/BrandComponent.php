@@ -16,6 +16,7 @@ class BrandComponent extends Component
         'id' => '',
         'brand_name' => '',
         'brand_code' => '',
+        'created_by' => '',
         'is_active' => false,
     ];
 
@@ -41,6 +42,7 @@ class BrandComponent extends Component
                 'id' => $brand->id,
                 'brand_name' =>$brand->brand_name,
                 'brand_code' => $brand->brand_code,
+                'created_by' =>  $brand->created_by,
                 'is_active' => $brand->is_active,
             ];
         } else {
@@ -84,6 +86,7 @@ class BrandComponent extends Component
 
             $brand->brand_name = $this->brand['brand_name'];
             $brand->brand_code = $this->brand['brand_code'];
+            $brand->created_by = $this->brand['created_by'] ? $this->brand['created_by'] : userID();
             $brand->is_active = $this->brand['is_active'];
 
 
@@ -130,6 +133,7 @@ class BrandComponent extends Component
             'id' => '',
             'brand_name' => '',
             'brand_code' => '',
+            'created_by' => '',
             'is_active' => false,
         ];
     }

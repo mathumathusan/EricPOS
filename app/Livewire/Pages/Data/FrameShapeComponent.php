@@ -15,6 +15,7 @@ class FrameShapeComponent extends Component
         'id' => '',
         'name' => '',
         'code_no' => '',
+        'created_by' => '',
         'is_active' => false,
     ];
 
@@ -42,6 +43,7 @@ class FrameShapeComponent extends Component
                 'id' => $frame_shape->id,
                 'name' => $frame_shape->name,
                 'code_no' => $frame_shape->code_no,
+                'created_by' =>  $frame_shape->created_by,
                 'is_active' => $frame_shape->is_active,
             ];
         } else {
@@ -85,6 +87,7 @@ class FrameShapeComponent extends Component
 
             $frame_shape->name = $this->frame_shape['name'];
             $frame_shape->code_no = $this->frame_shape['code_no'];
+            $frame_shape->created_by = $this->frame_shape['created_by'] ? $this->frame_shape['created_by'] : userID();
             $frame_shape->is_active = $this->frame_shape['is_active'];
 
 
@@ -131,6 +134,7 @@ class FrameShapeComponent extends Component
             'id' => '',
             'name' => '',
             'code_no' => '',
+            'created_by' => '',
             'is_active' => false,
         ];
     }
