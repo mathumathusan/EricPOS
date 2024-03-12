@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\BarcodeType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,9 +26,11 @@ class Product extends Model
         'is_active',
     ];
 
+
     protected $casts = [
         'is_active' => 'boolean',
         'enable_stock' => 'boolean',
+        'barcode_type' => BarcodeType::class
     ];
 
     public function category()
@@ -38,5 +41,10 @@ class Product extends Model
     public function brand()
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
     }
 }

@@ -45,3 +45,6 @@ php artisan make:livewire pages/user/userRolePermissionComponent
 php artisan serve --host 0.0.0.0
 
 php artisan serve --port=8001
+
+
+php artisan make:enum BarcodeType

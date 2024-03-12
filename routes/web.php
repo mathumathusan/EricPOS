@@ -53,7 +53,7 @@ Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
     Route::get('/locations', LocationComponent::class)->middleware(['permission:view_locations'])->name('locations');
     Route::get('/customers', CustomerComponent::class)->middleware(['permission:view_customers'])->name('customers');
     Route::get('/products', ProductListComponent::class)->middleware(['permission:view_products'])->name('products');
-    Route::get('/products/{id}', ProductComponent::class)->middleware(['permission:edit_product'])->name('products.edit');
+    Route::get('/products/edit/{id}', ProductComponent::class)->middleware(['permission:edit_product'])->name('products.edit');
     Route::get('/products/create', ProductComponent::class)->middleware(['permission:add_product'])->name('products.add');
 
     Route::get('/brands', BrandComponent::class)->middleware(['permission:view_brands'])->name('brands');
