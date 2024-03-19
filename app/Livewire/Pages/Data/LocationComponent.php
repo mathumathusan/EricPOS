@@ -24,6 +24,7 @@ class LocationComponent extends Component
         'website' => '',
         'social_media' => [],
         'default_language' => 'en',
+        'created_by'=> '',
         'is_active' => false,
     ];
 
@@ -55,6 +56,7 @@ class LocationComponent extends Component
                 'website' =>$location->website,
                 'social_media' => $location->social_media,
                 'default_language' => $location->default_language,
+                'created_by' => $location->created_by,
                 'is_active' => $location->is_active,
             ];
         } else {
@@ -109,6 +111,7 @@ class LocationComponent extends Component
             $location->email = $this->location['email'];
             $location->website = $this->location['website'];
             $location->default_language = $this->location['default_language'];
+            $location->created_by = $this->location['created_by'] ? $this->location['created_by'] : userID();
             $location->is_active = $this->location['is_active'];
 
 
@@ -162,6 +165,7 @@ class LocationComponent extends Component
             'website' => '',
             'social_media' => [],
             'default_language' => '',
+            'created_by' => '',
             'is_active' => false,
         ];
     }

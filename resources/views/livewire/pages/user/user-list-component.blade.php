@@ -42,13 +42,13 @@
                                     <td>{{ $user->id }}</td>
 
                                     <td class="fw-bold">{{ $user->name }}</td>
-                                    <td><span class="badge bg-primary-transparent">{{ $user->username }}</span></td>
+                                    <td><span class="badge bg-primary">{{ $user->username }}</span></td>
                                     <td></td>
                                     <td>
                                         @foreach ($user->getRoleNames() as $role)
                                         <h6>
                                             <span
-                                                class="badge bg-{{ $role == 'admin' ? 'success' : ($role == 'author' ? 'danger' : 'dark') }}">{{ $role == 'admin' ? 'Admin' : ($role == 'author' ? 'Author' : 'Super Admin') }}</span>
+                                                class="badge bg-{{ $role == 'admin' ? 'success' : ($role == 'author' ? 'danger' : 'dark') }}">{{ ucfirst($role)}}</span>
                                         </h6>
                                         @endforeach
                                     </td>

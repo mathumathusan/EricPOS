@@ -45,10 +45,30 @@ class RoleSeeder extends Seeder
             'edit_product',
             'delete_product',
 
-            'view_purchases',
-            'add_purchase',
-            'edit_draft_purchase',
-            'delete_purchase',
+            'view_brands',
+            'add_brand',
+            'edit_brand',
+            'delete_brand',
+
+            'view_products',
+            'add_product',
+            'edit_product',
+            'delete_product',
+
+            'view_frame_shapes',
+            'add_frame_shape',
+            'edit_frame_shape',
+            'delete_frame_shape',
+
+            'view_categories',
+            'add_category',
+            'edit_category',
+            'delete_category',
+
+            'view_customers',
+            'add_customer',
+            'edit_customer',
+            'delete_customer',
 
             'manage_payment',
             'manage_profile',
@@ -68,6 +88,23 @@ class RoleSeeder extends Seeder
             'add_product',
             'edit_product',
 
+
+            'view_frame_shapes',
+            'add_frame_shape',
+            'edit_frame_shape',
+
+            'view_brands',
+            'add_brand',
+            'edit_brand',
+
+            'view_categories',
+            'add_category',
+            'edit_category',
+
+            'view_customers',
+            'add_customer',
+            'edit_customer',
+
             'view_purchases',
             'add_purchase',
 
@@ -82,8 +119,19 @@ class RoleSeeder extends Seeder
         $author = Role::findByName('staff');
         $author->givePermissionTo([
 
-            'view_products',  'view_dashboard',
+            'view_products',
+            'view_dashboard',
             'manage_profile',
+
+            'view_brands',
+
+            'view_frame_shapes',
+
+            'view_categories',
+
+            'view_customers',
+            'add_customer',
+            'edit_customer',
 
         ]);
 

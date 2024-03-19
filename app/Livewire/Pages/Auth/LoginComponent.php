@@ -30,8 +30,8 @@ class LoginComponent extends Component
         }
 
         if (app()->environment('local')) {
-            $this->username = 'raj';
-            $this->password = 'raj';
+            $this->username = 'lonceytech';
+            $this->password = 'lonceytech';
         }
     }
 

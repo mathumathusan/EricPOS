@@ -90,7 +90,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Address</label>
-                            <textarea class="form-control @error('location.address') is-invalid @enderror" wire:model="customer.address"
+                            <textarea class="form-control @error('location.address') is-invalid @enderror" wire:model="location.address"
                                 id="address" rows="3"></textarea>
                             @error('location.address')
                                 <span class="invalid-feedback" role="alert">

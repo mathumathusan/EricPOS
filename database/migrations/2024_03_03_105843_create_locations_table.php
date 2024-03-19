@@ -22,8 +22,13 @@ return new class extends Migration
             $table->string('website')->nullable();
             $table->json('social_media')->nullable();
             $table->string('default_language')->default('en');
+            $table->unsignedBigInteger('created_by');
             $table->boolean('is_active')->default(true);
+            $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

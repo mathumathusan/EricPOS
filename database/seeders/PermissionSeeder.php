@@ -54,10 +54,30 @@ class PermissionSeeder extends Seeder
             ['name' => 'edit_location', 'display_name' => 'Edit Location', 'permission_module_id' => PermissionModule::where('name', 'Location')->first()->id],
             ['name' => 'delete_location', 'display_name' => 'Delete Location', 'permission_module_id' => PermissionModule::where('name', 'Location')->first()->id],
 
+            ['name' => 'view_customers', 'display_name' => 'View Customers', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'add_customer', 'display_name' => 'Add Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'edit_customer', 'display_name' => 'Edit Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+            ['name' => 'delete_customer', 'display_name' => 'Delete Customer', 'permission_module_id' => PermissionModule::where('name', 'Customer')->first()->id],
+
             ['name' => 'view_products', 'display_name' => 'View Products', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'add_product', 'display_name' => 'Add Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'edit_product', 'display_name' => 'Edit Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
             ['name' => 'delete_product', 'display_name' => 'Delete Product', 'permission_module_id' => PermissionModule::where('name', 'Product')->first()->id],
+
+            ['name' => 'view_brands', 'display_name' => 'View Brands', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'add_brand', 'display_name' => 'Add Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'edit_brand', 'display_name' => 'Edit Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+            ['name' => 'delete_brand', 'display_name' => 'Delete Brand', 'permission_module_id' => PermissionModule::where('name', 'Brand')->first()->id],
+
+            ['name' => 'view_frame_shapes', 'display_name' => 'View Frame Shapes', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'add_frame_shape', 'display_name' => 'Add Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'edit_frame_shape', 'display_name' => 'Edit Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+            ['name' => 'delete_frame_shape', 'display_name' => 'Delete Frame Shape', 'permission_module_id' => PermissionModule::where('name', 'Frame Shape')->first()->id],
+
+            ['name' => 'view_categories', 'display_name' => 'View Categories', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'add_category', 'display_name' => 'Add Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'edit_category', 'display_name' => 'Edit Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
+            ['name' => 'delete_category', 'display_name' => 'Delete Category', 'permission_module_id' => PermissionModule::where('name', 'Category')->first()->id],
 
             ['name' => 'view_purchases', 'display_name' => 'View Purchases', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],
             ['name' => 'add_purchase', 'display_name' => 'Add Purchase', 'permission_module_id' => PermissionModule::where('name', 'Purchase')->first()->id],

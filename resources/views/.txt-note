@@ -9,10 +9,31 @@ composer dump-autoload
 
 php artisan make:model Location --migration
 php artisan make:model Customer --migration
+php artisan make:model Brand --migration
+php artisan make:model Category --migration
+php artisan make:model FrameShape --migration
+php artisan make:model Unit --migration
+
+php artisan make:model Product --migration
+php artisan make:model Sales --migration
+php artisan make:model SalesItem --migration
+php artisan make:model CoatingBrand --migration
+php artisan make:model CoatingOption --migration
+
+php artisan make:model JobOrder --migration
+php artisan make:model JobPrescription --migration
+php artisan make:model JobFrame --migration
 
 php artisan make:livewire pages/auth/loginComponent
 php artisan make:livewire pages/adminDashboardComponent
 php artisan make:livewire pages/data/locationComponent
+php artisan make:livewire pages/data/customerComponent
+php artisan make:livewire pages/data/BrandComponent
+php artisan make:livewire pages/data/CategoryComponent
+php artisan make:livewire pages/data/FrameShapeComponent
+
+php artisan make:livewire pages/product/productListComponent
+php artisan make:livewire pages/product/productComponent
 
 php artisan make:livewire pages/user/userListComponent
 php artisan make:livewire pages/user/userComponent
@@ -20,6 +41,10 @@ php artisan make:livewire pages/user/userPermissionComponent
 php artisan make:livewire pages/user/userRoleComponent
 php artisan make:livewire pages/user/userRolePermissionComponent
 
+
 php artisan serve --host 0.0.0.0
 
 php artisan serve --port=8001
+
+
+php artisan make:enum BarcodeType
