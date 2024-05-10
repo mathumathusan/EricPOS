@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Livewire\Pages\User\UserComponent;
 use App\Livewire\Pages\Auth\LoginComponent;
 use App\Http\Controllers\Auth\loginController;
+use App\Http\Controllers\PrintController;
 use App\Livewire\Pages\Data\LocationComponent;
 use App\Livewire\Pages\User\UserListComponent;
 use App\Livewire\Pages\User\UserRoleComponent;
@@ -13,10 +14,18 @@ use App\Livewire\Pages\Data\BrandComponent;
 use App\Livewire\Pages\Data\CategoryComponent;
 use App\Livewire\Pages\Data\CustomerComponent;
 use App\Livewire\Pages\Data\FrameShapeComponent;
+use App\Livewire\Pages\Job\JobComponent;
+use App\Livewire\Pages\Job\JobListComponent;
 use App\Livewire\Pages\Product\ProductComponent;
 use App\Livewire\Pages\Product\ProductListComponent;
+use App\Livewire\Pages\Sales\SaleComponent;
+use App\Livewire\Pages\Sales\SaleComponentv2;
+use App\Livewire\Pages\Sales\SaleListComponent;
+use App\Livewire\Pages\Sales\SalePrintComponent;
+use App\Livewire\Pages\Sales\SalesComponent;
 use App\Livewire\Pages\User\UserPermissionComponent;
 use App\Livewire\Pages\User\UserRolePermissionComponent;
+use App\Livewire\SalePrintComponent as LivewireSalePrintComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,8 +65,24 @@ Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
     Route::get('/products/edit/{id}', ProductComponent::class)->middleware(['permission:edit_product'])->name('products.edit');
     Route::get('/products/create', ProductComponent::class)->middleware(['permission:add_product'])->name('products.add');
 
+    Route::get('/jobs/add', JobComponent::class)->name('jobs.add');
+    Route::get('/jobs', JobListComponent::class)->name('jobs');
+    Route::get('/jobs/edit/{id}', JobComponent::class)->name('jobs.edit');
+
+    
+
     Route::get('/brands', BrandComponent::class)->middleware(['permission:view_brands'])->name('brands');
     Route::get('/categories', CategoryComponent::class)->middleware(['permission:view_categories'])->name('categories');
     Route::get('/frame-shapes', FrameShapeComponent::class)->middleware(['permission:view_frame_shapes'])->name('frame-shapes');
+
+
+    Route::get('/sales', SaleListComponent::class)->middleware(['permission:view_sales'])->name('sales');
+    Route::get('/sales/add', SaleComponent::class)->middleware(['permission:add_sales'])->name('sales.add');
+    Route::get('/sales/add2',SaleComponentv2::class)->middleware(['permission:add_sales2'])->name('sales.add2');
+    Route::get('/sales/edit/{id}',SaleComponent::class)->middleware(['permission:edit_sales'])->name('sales.edit');
+
+
+   // Route::get('/print',LivewireSalePrintComponent::class)->middleware(['permission:view_print'])->name('print');
+    Route::get('/print/{id}', [PrintController::class,'index'])->name('print');
 
 });

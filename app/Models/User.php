@@ -60,6 +60,10 @@ class User extends Authenticatable
         return asset('assets/admin/images/faces/9.jpg');
     }
 
+    public function locations(){
+        return $this->belongsToMany(location::class, 'user_locations', 'user_id', 'location_id');
+    }
+
     public function getRoleNameAttribute()
     {
         if ($this->roles->count() > 0) {

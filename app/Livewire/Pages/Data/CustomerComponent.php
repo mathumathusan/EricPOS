@@ -100,7 +100,6 @@ class CustomerComponent extends Component
         try {
 
             $customer = $this->customer['id'] ? Customer::findOrFail($this->customer['id'])  : new Customer;
-
             $customer->location_id = $this->customer['location_id'];
             $customer->cus_name = $this->customer['cus_name'];
             $customer->email = $this->customer['email'];
@@ -120,8 +119,9 @@ class CustomerComponent extends Component
         } catch (\Throwable $th) {
             // Handle the exception
             $error_message = $th->getMessage();
-            Log::error("Customer Saving Failed", ['process' => '[Customer]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__, 'error_message' => $error_message]);
-            // You may also provide user feedback here
+            // Log::error("Customer Saving Failed", ['process' => '[Customer]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__, 'error_message' => $error_message]);
+           
+            $this->dispatch('alert',['type'=>'error','message'=>$error_message]);
         }
     }
 

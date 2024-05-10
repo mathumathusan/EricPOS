@@ -24,4 +24,13 @@ class JobFrame extends Model
         'coating_option_id',
         'tint',
     ];
+
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
+
+
 }

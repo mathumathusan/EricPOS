@@ -1,6 +1,5 @@
 <main>
 
-
     <div class="row">
         <div class="col-xl-12">
             <div class="card custom-card">
@@ -25,7 +24,7 @@
                                     @endcan
                                     <th scope="col">Customer Code</th>
                                     <th scope="col">Customer Name</th>
-                                    <th scope="col">Mobile Number</th>
+                                    <th scope="col">Customer Location</th>
                                     <th scope="col">Phone Number</th>
                                     <th scope="col">Location</th>
 
@@ -40,14 +39,11 @@
                                     <td>{{ $customer->id }}</td>
                                     @endcan
                                     <td><h6><span class="badge bg-primary">{{ $customer->cus_code }}</span></h6></td>
-
                                     <td class="fw-bold">{{ $customer->cus_name   }}</td>
                                     <td>{{ $customer->location->name  }}</td>
                                     <td>{{ $customer->mobile }}</td>
                                     <td>{{ $customer->phone }}</td>
                                     <td> <h6><span class="badge bg-{{ $customer->is_active ? 'success' : 'danger' }}">{{ $customer->is_active ? 'Active' : 'Inactive' }}</span></h6> </td>
-
-
                                     <td>
                                         <div class="hstack gap-2 fs-15">
                                             {{-- <a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"><i
@@ -61,15 +57,11 @@
                                             <span class="btn btn-icon btn-sm btn-danger"  wire:click.prevent="deleteConfirm({{ $customer->id }})"><i
                                                     class="ri-delete-bin-6-line"></i></span>
                                                     @endcan
-
                                         </div>
                                     </td>
                                 </tr>
-
                                 @empty
-
                                 @endforelse
-
                             </tbody>
                         </table>
                     </div>

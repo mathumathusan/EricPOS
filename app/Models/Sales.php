@@ -14,6 +14,7 @@ class Sales extends Model
         'customer_id',
         'sales_date',
         'sales_by',
+        'created_by',
         'sub_total',
         'discount',
         'total',
@@ -25,10 +26,10 @@ class Sales extends Model
     protected $dates = ['sales_date'];
 
 
-    public function location()
-    {
-        return $this->belongsTo(Location::class);
-    }
+    // public function location()
+    // {
+    //     return $this->belongsTo(Location::class);
+    // }
 
     public function customer()
     {

@@ -11,8 +11,7 @@
                             <div class="col-md-8">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" wire:model="user.name" @error('user.name')
-                                        is-invalid @enderror id="name" placeholder="Name">
+                                    <input type="text" class="form-control" wire:model="user.name" @error('user.name') is-invalid @enderror id="name" placeholder="Name">
 
                                     @error('user.name')
                                     <span class="invalid-feedback" role="alert">
@@ -23,8 +22,7 @@
 
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="form-control @error('user.username') is-invalid @enderror"
-                                        id="username" wire:model="user.username" placeholder="User Name">
+                                    <input type="text" class="form-control @error('user.username') is-invalid @enderror" id="username" wire:model="user.username" placeholder="User Name">
                                     @error('user.username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -32,11 +30,22 @@
                                     @enderror
                                 </div>
 
-
+                                <div class="mb-3">
+                                    <label for="locations" class="form-label">Locations</label>
+                                    <select id="locations" wire:model="user.locations" multiple class="form-control @error('user.locations') is-invalid @enderror">
+                                        @foreach ($locations as $location)
+                                        <option value="{{ $location->id }}">{{ $location->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('user.locations')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control @error('user.email') is-invalid @enderror"
-                                        id="email" wire:model="user.email" placeholder="youremail@email.com">
+                                    <input type="text" class="form-control @error('user.email') is-invalid @enderror" id="email" wire:model="user.email" placeholder="youremail@email.com">
                                     @error('user.email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -49,12 +58,12 @@
                                     <div class="col-auto">
                                         <div class="mb-3">
                                             <label for="role" class="form-label">User Role</label>
-                                            <select id="role" wire:model="user.role"
-                                                class="form-control @error('user.role') is-invalid @enderror">
+                                            <select id="role" wire:model="user.role" class="form-control @error('user.role') is-invalid @enderror">
                                                 <option value="">Choose Role</option>
                                                 @foreach ($roles as $role)
                                                 <option value="{{ $role->id }}">
-                                                    {{ ucfirst($role->name) }}</option>
+                                                    {{ ucfirst($role->name) }}
+                                                </option>
                                                 @endforeach
                                             </select>
 
@@ -71,9 +80,7 @@
                                         <div class="mb-3">
                                             <label for="login_attempt" class="form-label">Login
                                                 Attempt</label>
-                                            <input type="number"
-                                                class="form-control @error('user.login_attempts') is-invalid @enderror"
-                                                id="login_attempt" wire:model="user.login_attempts">
+                                            <input type="number" class="form-control @error('user.login_attempts') is-invalid @enderror" id="login_attempt" wire:model="user.login_attempts">
 
                                             @error('user.login_attempts')
                                             <span class="invalid-feedback" role="alert">
@@ -87,9 +94,7 @@
                                         <div class="mb-3">
                                             <label for="role" class="form-label">Is Blocked</label>
 
-                                            <h5><input id="role" class="form-check-input" type="checkbox"
-                                                    wire:model="user.is_blocked" wire:model="user.is_blocked"
-                                                    {{ $user['is_blocked'] ? 'checked' : '' }}>
+                                            <h5><input id="role" class="form-check-input" type="checkbox" wire:model="user.is_blocked" wire:model="user.is_blocked" {{ $user['is_blocked'] ? 'checked' : '' }}>
                                             </h5>
 
 
@@ -110,11 +115,9 @@
                             <div class="col-md-4">
                                 <div class="text-center">
                                     @if ($user['id'])
-                                    <img alt="Chris Wood" src="{{ $user['profile_pic'] }}"
-                                        class="rounded-circle img-responsive mt-2" width="128" height="128" />
-                                        @else
-                                        <img alt="Chris Wood" src="{{ asset('assets/images/apps/figma.png') }}"
-                                        class="rounded-circle img-responsive mt-2" width="128" height="128" />
+                                    <img alt="Chris Wood" src="{{ $user['profile_pic'] }}" class="rounded-circle img-responsive mt-2" width="128" height="128" />
+                                    @else
+                                    <img alt="Chris Wood" src="{{ asset('assets/images/apps/figma.png') }}" class="rounded-circle img-responsive mt-2" width="128" height="128" />
                                     @endif
                                     @if (false)
                                     <div class="mt-2">
@@ -135,8 +138,8 @@
                     </form>
                     @if ($user['id'])
                     <small class="mt-3 fw-bold text-danger d-block">Last Login At: {{ $user['last_login_at']  }}</small>
-                    <small> <a href="https://whatismyipaddress.com/ip/{{ $user['last_login_ip']  }}" target="_blank" class="mt-1 fw-bold  d-block"> Last Login IP: {{ $user['last_login_ip']  }}</a>   </small>
-            @endif
+                    <small> <a href="https://whatismyipaddress.com/ip/{{ $user['last_login_ip']  }}" target="_blank" class="mt-1 fw-bold  d-block"> Last Login IP: {{ $user['last_login_ip']  }}</a> </small>
+                    @endif
                 </div>
 
             </div>
@@ -151,13 +154,11 @@
                 <div class="card-body">
                     <div class="row">
                         <form>
-                            <button type="button" wire:click.prevent="updatePw()"
-                                class="btn btn-{{ $changePw ? 'dark' : 'primary' }}">Click to change password</button>
+                            <button type="button" wire:click.prevent="updatePw()" class="btn btn-{{ $changePw ? 'dark' : 'primary' }}">Click to change password</button>
 
                             <div class="mt-3">
                                 <label for="password" class="form-label">New password</label>
-                                <input type="password" class="form-control @error('password') is-invalid @enderror "
-                                    id="password" wire:model="password" {{ $changePw ? '' : 'disabled' }}>
+                                <input type="password" class="form-control @error('password') is-invalid @enderror " id="password" wire:model="password" {{ $changePw ? '' : 'disabled' }}>
 
 
                                 @error('password')

@@ -8,8 +8,6 @@
                     <div class="card-title"> Manage Users </div>
                     <div class="d-flex">
                         @can('add_users')
-
-
                         <a href="{{ route('users.add') }}"
                             class="btn btn-sm btn-primary btn-wave waves-light waves-effect waves-light"><i
                                 class="ri-add-line fw-semibold align-middle me-1"></i> Create User</a>

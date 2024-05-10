@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages\User;
 
+use App\Models\Location;
 use App\Models\User;
 use Livewire\Component;
 use Spatie\Permission\Models\Role;
@@ -23,6 +24,7 @@ class UserComponent extends Component
         'last_login_ip' => '',
 
         'role' => '',
+        'locations' => [],
     ];
 
     public $password;
@@ -88,7 +90,10 @@ class UserComponent extends Component
         } else {
             $roles = Role::whereNotIn('name', ['super-admin'])->get();
         }
-        return view('livewire.pages.user.user-component', compact('roles'));
+         
+        $locations=Location::all();
+
+        return view('livewire.pages.user.user-component', compact('roles','locations'));
     }
 
     public function updateData()
@@ -113,8 +118,14 @@ class UserComponent extends Component
         }
         $user->syncRoles([(int)$this->user['role']]);
 
+
+ 
+
+
         // $user->syncRoles((int)$this->user['role']);
         $user->save();
+
+        $user->locations()->sync($this->user['locations']);
 
         return redirect()->route('users')->with('success', 'User' . ($this->user['id'] ? ' Updated' : ' Created') . ' Successfully');
     }

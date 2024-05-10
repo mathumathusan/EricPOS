@@ -27,6 +27,9 @@ class Location extends Model
     protected $casts = [
         'social_media' => 'json',
         'is_active' => 'boolean',
-
     ];
+
+    public function user(){
+        return $this->belongsToMany(User::class, 'user_locations');
+    }
 }

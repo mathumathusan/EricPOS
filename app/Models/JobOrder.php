@@ -22,6 +22,7 @@ class JobOrder extends Model
         'discount_amount',
         'balance_amount',
         'test_by',
+        'take_by',
         'remarks',
         'created_by',
         'status'
@@ -32,6 +33,11 @@ class JobOrder extends Model
     public function location()
     {
         return $this->belongsTo(Location::class);
+    }
+
+    public function prescription()
+    {
+        return $this->belongsTo(JobPrescription::class);
     }
 
     public function customer()

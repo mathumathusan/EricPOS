@@ -102,7 +102,6 @@ class LocationComponent extends Component
         try {
 
             $location = $this->location['id'] ? Location::findOrFail($this->location['id'])  : new Location;
-
             $location->name = $this->location['name'];
             $location->store_code = $this->location['store_code'];
             $location->address = $this->location['address'];

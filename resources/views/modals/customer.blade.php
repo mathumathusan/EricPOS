@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h6 class="modal-title" id="customermodal">{{ $updateMode == true ? 'Update' : 'Create' }} Customer</h6>
+             <h6 class="modal-title" id="customermodal">{{$updateMode == true ? 'Update' : 'Create' }} Customer</h6>   
                 <button type="button" wire:click.prevent="clear()" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close">
                 </button>
@@ -29,17 +29,15 @@
                     <div class="col-6">
 
                         <div class="mb-3">
-                            <label for="location_id" class="form-label">Customer</label>
+                            <label for="location_id" class="form-label">Customer location</label>
                             <select wire:model="customer.location_id"
                                 class="form-select @error('customer.location_id') is-invalid @enderror"
                                 id="location_id">
                                 <option value="">Select Location</option>
                                 @forelse ($locations as $id => $location)
-                                <option value="{{ $id }}">{{ $location }}</option>
+                                <option value="{{ $id }}">{{ $location }}</option>  
                                 @empty
-
                                 @endforelse
-
                             </select>
 
                             @error('customer.location_id')

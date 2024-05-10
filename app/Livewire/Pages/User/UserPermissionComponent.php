@@ -65,7 +65,6 @@ class UserPermissionComponent extends Component
         $this->dispatch('table-updated');
         $this->updateMode = false;
         $this->dispatch('modalHide');
-
         $this->permission['name'] = '';
         $this->permission['display_name'] = '';
         $this->permission['permission_module_id'] = '';
@@ -77,12 +76,10 @@ class UserPermissionComponent extends Component
 
     public function save()
     {
-
         $this->validate([
             'permission.name' => 'required',
             'permission.permission_module_id' => 'required',
             'permission.display_name' => 'required',
-
         ]);
 
         Permission::updateOrCreate(['id' => $this->permission['id']], [

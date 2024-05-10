@@ -40,18 +40,17 @@ class Customer extends Model
         parent::boot();
 
         static::creating(function ($customer) {
+            
             $locationCode = $customer->location->store_code;
 
-            // Get the maximum customer ID for the specific location
-            $lastCustomerId = Customer::where('location_id', $customer->location_id)->max('cus_id');
+            $lastCustomerId = Customer::withTrashed()->max('id');
 
-            // Handle the case when there are no existing customers for the location
             $newCusId = ($lastCustomerId !== null) ? $lastCustomerId + 1 : 1;
 
-            // Generate the new cus_code
+           
             $newCusCode = $locationCode . str_pad($newCusId, 5, '0', STR_PAD_LEFT);
 
-            // Check if the generated cus_code is unique
+    
             while (Customer::where('cus_code', $newCusCode)->exists()) {
                 $newCusId++;
                 $newCusCode = $locationCode . str_pad($newCusId, 5, '0', STR_PAD_LEFT);
@@ -61,6 +60,9 @@ class Customer extends Model
             $customer->cus_code = $newCusCode;
         });
     }
+
+
+
 
     public function location()
     {

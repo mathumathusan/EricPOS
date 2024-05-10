@@ -1,6 +1,10 @@
 <main>
-
-
+<div class="d-flex justify-content-end">
+    <div class="input-group mb-3 " style="width:25%;">
+        <input type="text" class="form-control form-control-sm" wire:model.live="search" >
+        <div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
+    </div>
+    </div>
     <div class="row">
         <div class="col-xl-12">
             <div class="card custom-card">
@@ -8,15 +12,10 @@
                     <div class="card-title"> Manage Products </div>
                     <div class="d-flex">
                         @can('add_product')
-
-
                         <a href="{{ route('products.add') }}"
                             class="btn btn-sm btn-primary btn-wave waves-light waves-effect waves-light"><i
                                 class="ri-add-line fw-semibold align-middle me-1"></i> Create Product</a>
-
                         @endcan
-
-
                     </div>
                 </div>
                 <div class="card-body">
@@ -30,7 +29,6 @@
                                     <th scope="col">Category</th>
                                     <th scope="col">Brand</th>
                                     <th scope="col">Status</th>
-
                                     @can('super-admin')
                                     <th scope="col">Created Date</th>
                                     @endcan
@@ -64,15 +62,11 @@
                                                 wire:click.prevent="deleteConfirm({{ $product->id }})"><i
                                                     class="ri-delete-bin-6-line"></i></span>
                                             @endcan
-
                                         </div>
                                     </td>
                                 </tr>
-
                                 @empty
-
                                 @endforelse
-
                             </tbody>
                         </table>
                     </div>

@@ -34,6 +34,8 @@ php artisan make:livewire pages/data/FrameShapeComponent
 
 php artisan make:livewire pages/product/productListComponent
 php artisan make:livewire pages/product/productComponent
+php artisan make:livewire pages/job/jobComponent
+php artisan make:livewire pages/job/jobListComponent
 
 php artisan make:livewire pages/user/userListComponent
 php artisan make:livewire pages/user/userComponent

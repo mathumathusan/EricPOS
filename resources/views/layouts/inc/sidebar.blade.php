@@ -133,13 +133,30 @@
                             <a href="{{ route('frame-shapes') }}" class="side-menu__item {{ request()->routeIs('frame-shapes') ? 'active' : '' }}">Frame Shapes</a>
                         </li>
                         @endcan
+
+                        
                     </ul>
                 </li>
                 <!-- End::slide -->
 
                 @endcan
 
+                <li class="slide">
+                    <a href="{{ route('jobs') }}"
+                        class="side-menu__item {{ request()->routeIs('customers') ? 'active' : '' }}">
+                        <i class="bx bx-user-pin side-menu__icon"></i>
+                        <span class="side-menu__label">jobs</span>
+                    </a>
+                </li>
 
+
+                <li class="slide">
+                    <a href="{{ route('sales') }}"
+                        class="side-menu__item {{ request()->routeIs('customers') ? 'active' : '' }}">
+                        <i class="bx bx-user-pin side-menu__icon"></i>
+                        <span class="side-menu__label">sales</span>
+                    </a>
+                </li>
 
 
                 @if (false)
