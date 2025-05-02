@@ -25,7 +25,7 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">User Name</th>
-                                    <th scope="col">Locations</th>
+                                    <!-- <th scope="col">Locations</th> -->
                                     <th scope="col">Role</th>
                                     <th scope="col">Last Login</th>
                                     @can('super-admin')
@@ -41,7 +41,7 @@
 
                                     <td class="fw-bold">{{ $user->name }}</td>
                                     <td><span class="badge bg-primary">{{ $user->username }}</span></td>
-                                    <td></td>
+                                   
                                     <td>
                                         @foreach ($user->getRoleNames() as $role)
                                         <h6>

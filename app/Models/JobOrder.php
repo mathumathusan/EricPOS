@@ -37,7 +37,7 @@ class JobOrder extends Model
 
     public function prescription()
     {
-        return $this->belongsTo(JobPrescription::class);
+        return $this->hasMany(JobPrescription::class, 'job_order_id');
     }
 
     public function customer()
@@ -55,4 +55,5 @@ class JobOrder extends Model
         return $this->hasMany(SalesItem::class, 'job_order_id');
     }
 
+   
 }

@@ -363,6 +363,9 @@ class JobComponent extends Component
 
         return redirect()->route('jobs')->with('success', 'Job' . ($this->job['id'] ? ' Updated' : ' Created') . ' Successfully');
 
+        // return redirect()->route('jobPrint',$job->id);
+        
+
     }
 
 

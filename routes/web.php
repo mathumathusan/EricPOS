@@ -5,7 +5,9 @@ use App\Http\Controllers\AdminController;
 use App\Livewire\Pages\User\UserComponent;
 use App\Livewire\Pages\Auth\LoginComponent;
 use App\Http\Controllers\Auth\loginController;
+use App\Http\Controllers\Print1Controller;
 use App\Http\Controllers\PrintController;
+use App\Http\Controllers\PrintPrescriptionController;
 use App\Livewire\Pages\Data\LocationComponent;
 use App\Livewire\Pages\User\UserListComponent;
 use App\Livewire\Pages\User\UserRoleComponent;
@@ -84,5 +86,7 @@ Route::group(['prefix' => '_admin','middleware'=>['web','auth']], function () {
 
    // Route::get('/print',LivewireSalePrintComponent::class)->middleware(['permission:view_print'])->name('print');
     Route::get('/print/{id}', [PrintController::class,'index'])->name('print');
+    Route::get('/jobPrint/{id}',[Print1Controller::class,'index'])->name('jobPrint');
+    Route::get('/jobPrescription/{id}',[PrintPrescriptionController::class,'index'])->name('jobPrescription');
 
 });

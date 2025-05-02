@@ -1,3 +1,5 @@
+
+
 <main>
     <div class="row">
         <div class="col-xl-8 " >
@@ -19,18 +21,22 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row overflow-auto" style="max-height: 400px; overflow-y: auto;overflow-x: hidden;" >
-                        @foreach ($products as $index => $product)
-                            <div class="col-xl-3 p-4" wire:click="createProduct({{ $product->id }})" style="cursor:pointer;">
-                                <div class="card custom-card d-flex justify-content-center align-items-center" 
-                                     style="height: 15vh; background-color:#233a77; background-size: cover; background-position: center;">
-                                    <h5 class="text-center text-white">
-                                        <div class="badge ">{{ $product->product_name }}</div>
-                                    </h5>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
+                    <div class="row overflow-auto" style="max-height: 400px; overflow-y: auto;overflow-x: hidden;">
+    @foreach ($products as $index => $product)
+        <div class="col-xl-3 p-4" wire:click="createProduct({{ $product->id }})" style="cursor:pointer;">
+            <div class="card custom-card d-flex justify-content-center align-items-center" 
+                 style="height: 15vh; background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-picture-of-a-pair-of-black-sunglasses-on-black-image_2630422.jpg'); background-size: cover; background-position: center;">
+                <h5 class="text-center text-white">
+                    <div class="badge">{{ $product->product_name }}</div>
+                </h5>
+                <h6>
+                    <!-- <div class="badge">{{ $product->price == null ? 0.00 : $product->price }}</div> -->
+                </h6>
+            </div>
+        </div>
+    @endforeach
+</div>
+
                 </div>
             </div>
         </div>

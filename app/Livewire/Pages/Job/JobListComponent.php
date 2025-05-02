@@ -13,7 +13,7 @@ class JobListComponent extends Component
 
     public function render()
     {
-          $jobs = JobOrder::get();
+          $jobs = JobOrder::latest()->get();
           $prescriptions=JobPrescription::get();
           $frames=JobFrame::get();
         //  $products=Product::paginate(5);

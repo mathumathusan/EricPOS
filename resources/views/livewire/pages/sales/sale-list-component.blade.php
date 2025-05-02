@@ -5,7 +5,6 @@
         <div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
     </div>
     </div>
-  
     <div class="row">
         <div class="col-xl-12">
             <div class="card custom-card">
@@ -13,7 +12,7 @@
                     <div class="card-title"> Manage Sales </div>
                     <div class="d-flex">
                         @can('add_sale')
-                        <a href="{{ route('sales.add') }}" class="btn btn-sm btn-primary btn-wave waves-light waves-effect waves-light"><i class="ri-add-line fw-semibold align-middle me-1"></i> Create Sales</a>
+                        <a href="{{ route('sales.add2') }}" class="btn btn-sm btn-primary btn-wave waves-light waves-effect waves-light"><i class="ri-add-line fw-semibold align-middle me-1"></i> Create Sales</a>
                         @endcan
                     </div>
                 </div>
@@ -23,7 +22,7 @@
                             <thead class="table-primary">
                                 <tr>
                                     <th scope="col">sales_id </th>
-                                    <th scope="col">job_order_id</th>
+                                    
                                     <th scope="col">total</th>
                                     <th scope="col">discount</th>
                                     <th scope="col">balance</th>
@@ -34,7 +33,7 @@
                                 @foreach($sales as $sale)
                                 <tr>
                                     <td>{{$sale->id}}</td>
-                                    <td>{{$sale->job_order_id}}</td>
+                                    
                                     <td> {{$sale->total}}</td>
                                     <td>{{$sale->discount}}</td>
                                     <td>{{$sale->balance}}</td>

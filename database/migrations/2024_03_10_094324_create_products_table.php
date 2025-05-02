@@ -18,6 +18,7 @@ return new class extends Migration
             $table->enum('type', ['single', 'variable']);
             $table->unsignedBigInteger('unit_id');
             $table->string('product_img')->nullable();
+            $table->string('price')->nullable();
             $table->unsignedBigInteger('brand_id');
             $table->integer('category_id')->unsigned()->nullable();
             $table->integer('sub_category_id')->unsigned()->nullable();

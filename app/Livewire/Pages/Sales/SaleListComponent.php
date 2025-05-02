@@ -19,6 +19,7 @@ class SaleListComponent extends Component
        $sales=Sales::query()
                  ->where('job_order_id', 'like', '%' . $this->search . '%')
                  ->orWhere('id', 'like', '%' . $this->search . '%')
+                 ->latest()
                  ->get();
       
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -221,7 +222,7 @@
         <div class="navbodyright">
           <span>564,566ஆஸ்பத்திரி வீதி,</span><span> யாழ்ப்பாணம்.</span><span class="date">Date:
             <div class="date1">
-              {{$sale->sales_date}}
+              {{$job->created_at}}
             </div>
           </span>
         </div>
@@ -259,16 +260,20 @@
           </tr>
         </thead>
         <tbody>
-        @if($prescription)
-    <td>{{$prescription->right_sph}}</td>
-    <td>{{$prescription->right_cyl}}</td>
-    <td>{{$prescription->right_axis}}</td>
-    <td>{{$prescription->left_sph}}</td>
-    <td>{{$prescription->left_sph}}</td>
-    <td>{{$prescription->left_sph}}</td>
-@else
-    <td colspan="6">Prescription data not available</td>
-@endif
+          @if($prescription)
+          @foreach($prescription as $item) <!-- Iterate over each prescription -->
+          <tr>
+            <td>{{$item->right_sph}}</td>
+            <td>{{$item->right_cyl}}</td>
+            <td>{{$item->right_axis}}</td>
+            <td>{{$item->left_sph}}</td>
+            <td>{{$item->left_cyl}}</td>
+            <td>{{$item->left_axis}}</td>
+          </tr>
+          @endforeach
+          @else
+          <td colspan="6">Prescription data not available</td>
+          @endif
           <tr>
             <td colspan="3" rowspan="3">Content</td>
             <td colspan="3" rowspan="3">Content</td>
@@ -277,7 +282,10 @@
       </table>
     </section>
     <section class="sect4">
-    <span>Lenses:........{{$frame ? 'Lenses: .....' . $frame->lens_type . '....' : 'No JobFrame instance found.'}}.................................................</span><span>Frame Type:..........{{$frame ? $frame->type : 'N/A'}}......................<span>P.D:..................................................................................................</span></span>
+      <!-- Change this part in your Blade file -->
+
+      <span>Lenses:........{{$frame->isNotEmpty() ? 'Lenses: .....' . $frame->first()->lens_type . '....' : 'No JobFrame instance found.'}}.................................................</span><span>Frame Type:..........{{$frame->isNotEmpty() ? $frame->first()->type : 'N/A'}}......................<span>P.D:..................................................................................................</span></span>
+
       <div>
         <span class="remarks">tested by:......{{$user->name}}................<span>Remarks:{{$job?$job->remarks:''}}</span></span>
         <table class="table">
@@ -302,7 +310,6 @@
             <tr>
               <td>Total</td>
               <td>{{$job?$job->frame_amount+$job->lens_amount-$job->discount_amount:""}}</td>
-              <td>{{$sale->total}}</td>
             </tr>
             <tr>
               <td>Advance</td>

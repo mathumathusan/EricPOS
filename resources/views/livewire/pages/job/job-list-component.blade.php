@@ -17,7 +17,7 @@
                                 <tr>
                                     <th scope="col">job_no </th>
                                     <th scope="col">prescription_id</th>
-                                    <th scope="col">frame_id</th>
+                                   
                                     <th scope="col">frame_amount</th>
                                     <th scope="col">lens_amount </th>
                                     <th scope="col">balance_amount</th>
@@ -36,22 +36,15 @@
                                         @empty
                                         @endforelse
                                     </td>
-                                    <td>
-                                        @forelse($frames as $frame)
-                                        @if($frame->job_id==$job->id)
-                                        <span class="badge bg-primary">{{$frame->id}}</span>
-                                        @endif
-                                        @empty
-                                        @endforelse
-                                    </td>
+                                
                                     <td>{{ $job->frame_amount }}</td>
                                     <td>{{ $job->lens_amount }}</td>
                                     <td> {{ $job->balance_amount }}</td>
                                     <td>
-                                        <div class="hstack gap-2 fs-15">
-                                            {{-- <a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"><i
-                                                    class="ri-eye-line"></i></a> --}}
+                                        <div  class="hstack gap-2 fs-15 d-flex justify-content-around">
                                             <a href="{{ route('jobs.edit',$job->id) }}" class="btn btn-icon btn-sm btn-info"><i class="ri-edit-line"></i></a>
+                                            <a href="{{route('jobPrint',$job->id)}}"  class="btn btn-icon  btn-sm btn-success" target="blank"><i class='bx bx-printer'></i></a>
+                                            <a href="{{route('jobPrescription',$job->id)}}"  class="btn btn-icon  btn-sm btn-warning" target="blank"><i class='bx bx-printer'></i></a>
                                             <span class="btn btn-icon btn-sm btn-danger" wire:click.prevent="deleteConfirm({{ $job->id }})"><i class="ri-delete-bin-6-line"></i></span>
                                         </div>
                                     </td>
